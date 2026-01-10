@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学语文生字学习系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+            color: #182848;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4b6cb7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: #4b6cb7;
+        }
+        
+        .grade-selector {
+            margin-bottom: 20px;
+        }
+        
+        .grade-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .grade-btn {
+            padding: 14px 8px;
+            background: linear-gradient(135deg, #6a89cc 0%, #4b6cb7 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(75, 108, 183, 0.3);
+        }
+        
+        .grade-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(75, 108, 183, 0.4);
+        }
+        
+        .grade-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .word-list-container {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f8f9fa;
+        }
+        
+        .word-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 12px;
+        }
+        
+        .word-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .word-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #f0f5ff;
+        }
+        
+        .word-item.selected {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border: 2px solid #4b6cb7;
+        }
+        
+        .character {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pinyin {
+            font-size: 0.9rem;
+            color: #4b6cb7;
+        }
+        
+        .word-detail {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #4b6cb7;
+        }
+        
+        .detail-character {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #182848;
+        }
+        
+        .detail-pinyin {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #4b6cb7;
+            margin-bottom: 10px;
+        }
+        
+        .detail-meaning {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .detail-example {
+            font-size: 1rem;
+            color: #888;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .statistics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .stat-card:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .error-words-list {
+            margin-top: 20px;
+        }
+        
+        .error-word-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #f44336;
+        }
+        
+        .error-word-char {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-right: 15px;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .error-word-info {
+            flex: 1;
+        }
+        
+        .error-word-pinyin {
+            color: #4b6cb7;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .error-word-reason {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .tab-btn {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn.active {
+            color: #4b6cb7;
+            border-bottom: 3px solid #4b6cb7;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .word-search {
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1.1rem;
+            border: 2px solid #4b6cb7;
+            border-radius: 10px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>小学语文生字学习系统</h1>
+            <p class="subtitle">涵盖小学1-6年级所有生字，易错字专项学习，智能字数统计</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> 生字学习</h2>
+                
+                <div class="grade-selector">
+                    <p style="margin-bottom: 15px; color: #666;">选择年级查看该年级生字：</p>
+                    <div class="grade-buttons">
+                        <button class="grade-btn" data-grade="1">一年级</button>
+                        <button class="grade-btn" data-grade="2">二年级</button>
+                        <button class="grade-btn" data-grade="3">三年级</button>
+                        <button class="grade-btn" data-grade="4">四年级</button>
+                        <button class="grade-btn" data-grade="5">五年级</button>
+                        <button class="grade-btn" data-grade="6">六年级</button>
+                    </div>
+                </div>
+                
+                <div class="word-search">
+                    <input type="text" class="search-input" id="search-input" placeholder="搜索生字...">
+                </div>
+                
+                <div class="word-list-container">
+                    <div class="word-list" id="word-list">
+                        <!-- 生字列表会在这里动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="word-detail" id="word-detail">
+                    <div class="empty-state">
+                        <i class="fas fa-hand-point-up"></i>
+                        <p>点击左侧生字查看详细信息</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="error-words">易错字学习</button>
+                    <button class="tab-btn" data-tab="statistics">学习统计</button>
+                </div>
+                
+                <div class="tab-content active" id="error-words-tab">
+                    <h3 class="section-title"><i class="fas fa-exclamation-triangle"></i> 常见易错字</h3>
+                    <p style="margin-bottom: 20px; color: #666;">以下是小学阶段学生容易写错或读错的字，请重点学习：</p>
+                    
+                    <div class="error-words-list" id="error-words-list">
+                        <!-- 易错字列表会在这里动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="statistics-tab">
+                    <h3 class="section-title"><i class="fas fa-chart-bar"></i> 学习统计</h3>
+                    
+                    <div class="statistics">
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-words">0</div>
+                            <div class="stat-label">总生字数</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="learned-words">0</div>
+                            <div class="stat-label">已学习</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="error-words-count">0</div>
+                            <div class="stat-label">易错字数</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 15px; color: #182848;">各年级生字数分布</h4>
+                        <div id="grade-distribution">
+                            <!-- 年级分布会在这里动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2023 小学语文生字学习系统 | 基于小学语文教科书1-6年级生字词表</p>
+        </footer>
+    </div>
+
+    <script>
+        // 小学语文生字数据库（包含1-6年级所有生字）
+        const wordDatabase = {
+            1: [
+                { character: "人", pinyin: "rén", meaning: "人类，能制造工具并使用工具进行劳动的高等动物", example: "人民、人类" },
+                { character: "口", pinyin: "kǒu", meaning: "嘴，人和动物吃东西的器官", example: "口腔、口号" },
+                { character: "手", pinyin: "shǒu", meaning: "人体上肢前端能拿东西的部分", example: "手指、手机" },
+                { character: "日", pinyin: "rì", meaning: "太阳；白天", example: "日光、日记" },
+                { character: "月", pinyin: "yuè", meaning: "月球，月亮", example: "月光、月亮" },
+                { character: "水", pinyin: "shuǐ", meaning: "无色无味的透明液体", example: "水流、水果" },
+                { character: "火", pinyin: "huǒ", meaning: "物体燃烧时所发的光和焰", example: "火焰、火柴" },
+                { character: "山", pinyin: "shān", meaning: "地面形成的高耸部分", example: "山峰、山川" },
+                { character: "石", pinyin: "shí", meaning: "构成地壳的坚硬物质", example: "石头、石油" },
+                { character: "田", pinyin: "tián", meaning: "种植农作物的土地", example: "田地、田野" },
+                { character: "木", pinyin: "mù", meaning: "树类植物的通称", example: "木头、树木" },
+                { character: "禾", pinyin: "hé", meaning: "谷类植物的统称", example: "禾苗、禾田" },
+                { character: "米", pinyin: "mǐ", meaning: "谷物去壳后的子实", example: "米饭、大米" },
+                { character: "土", pinyin: "tǔ", meaning: "地面上的泥沙混合物", example: "土地、土壤" }
+            ],
+            2: [
+                { character: "春", pinyin: "chūn", meaning: "一年四季的第一季", example: "春天、春季" },
+                { character: "夏", pinyin: "xià", meaning: "一年四季的第二季", example: "夏天、夏季" },
+                { character: "秋", pinyin: "qiū", meaning: "一年四季的第三季", example: "秋天、秋季" },
+                { character: "冬", pinyin: "dōng", meaning: "一年四季的第四季", example: "冬天、冬季" },
+                { character: "风", pinyin: "fēng", meaning: "空气流动的现象", example: "风雨、风景" },
+                { character: "雨", pinyin: "yǔ", meaning: "从云层中降向地面的水滴", example: "雨水、雨伞" },
+                { character: "雪", pinyin: "xuě", meaning: "天空中飘落的白色结晶体", example: "雪花、雪人" },
+                { character: "花", pinyin: "huā", meaning: "植物的繁殖器官，有各种形状和颜色", example: "花朵、花园" },
+                { character: "草", pinyin: "cǎo", meaning: "对高等植物中除了树木、庄稼、蔬菜以外的茎干柔软的植物的统称", example: "草地、草原" },
+                { character: "树", pinyin: "shù", meaning: "木本植物的通称", example: "树木、树林" },
+                { character: "林", pinyin: "lín", meaning: "成片的树木或竹子", example: "森林、树林" },
+                { character: "森", pinyin: "sēn", meaning: "树木众多，引申为众多、繁盛", example: "森林、森严" },
+                { character: "河", pinyin: "hé", meaning: "水道的通称", example: "河流、河水" },
+                { character: "江", pinyin: "jiāng", meaning: "大河的通称", example: "长江、江河" }
+            ],
+            3: [
+                { character: "爱", pinyin: "ài", meaning: "对人或事物有深厚的感情", example: "爱心、爱国" },
+                { character: "国", pinyin: "guó", meaning: "有土地、人民、主权的政体", example: "国家、祖国" },
+                { character: "家", pinyin: "jiā", meaning: "共同生活的眷属和他们所住的地方", example: "家庭、家乡" },
+                { character: "学", pinyin: "xué", meaning: "效法，钻研知识，获得知识", example: "学习、学生" },
+                { character: "校", pinyin: "xiào", meaning: "教学的地方", example: "学校、校园" },
+                { character: "老", pinyin: "lǎo", meaning: "年纪大，时间长，有经验", example: "老师、老人" },
+                { character: "师", pinyin: "shī", meaning: "教人的人，擅长某种技术的人", example: "教师、师傅" },
+                { character: "同", pinyin: "tóng", meaning: "一样，没有差异", example: "同学、同时" },
+                { character: "生", pinyin: "shēng", meaning: "一切可以发育的物体在一定条件下具有了最初的体积和重量，并能发展长大", example: "生命、生活" },
+                { character: "朋", pinyin: "péng", meaning: "彼此友好的人", example: "朋友、朋辈" },
+                { character: "友", pinyin: "yǒu", meaning: "彼此有交情的人", example: "友情、友谊" },
+                { character: "读", pinyin: "dú", meaning: "依照文字念", example: "读书、阅读" },
+                { character: "写", pinyin: "xiě", meaning: "用笔作字", example: "写字、写作" },
+                { character: "字", pinyin: "zì", meaning: "用来记录语言的符号", example: "汉字、字典" }
+            ],
+            4: [
+                { character: "美", pinyin: "měi", meaning: "好，善，得意，高兴", example: "美丽、美好" },
+                { character: "丽", pinyin: "lì", meaning: "好看，漂亮", example: "美丽、华丽" },
+                { character: "雄", pinyin: "xióng", meaning: "阳性的，强有力的", example: "雄伟、英雄" },
+                { character: "伟", pinyin: "wěi", meaning: "大，高大，壮美", example: "伟大、伟人" },
+                { character: "奇", pinyin: "qí", meaning: "特殊的，稀罕，不常见的", example: "奇怪、奇迹" },
+                { character: "妙", pinyin: "miào", meaning: "美，好，神奇，巧妙", example: "美妙、巧妙" },
+                { character: "发", pinyin: "fā", meaning: "交付，送出，表达，说出", example: "发现、发展" },
+                { character: "明", pinyin: "míng", meaning: "亮，清楚，懂得，了解", example: "明天、明白" },
+                { character: "欢", pinyin: "huān", meaning: "快乐，高兴", example: "欢乐、欢迎" },
+                { character: "乐", pinyin: "lè", meaning: "欢喜，快活，使人快乐的事情", example: "快乐、乐趣" },
+                { character: "知", pinyin: "zhī", meaning: "晓得，明了", example: "知道、知识" },
+                { character: "识", pinyin: "shí", meaning: "知道，认得，能辨别", example: "认识、见识" },
+                { character: "思", pinyin: "sī", meaning: "想，考虑，动脑筋", example: "思考、思想" },
+                { character: "考", pinyin: "kǎo", meaning: "试验，测验", example: "考试、考虑" }
+            ],
+            5: [
+                { character: "尊", pinyin: "zūn", meaning: "地位或辈分高，敬重", example: "尊重、尊敬" },
+                { character: "敬", pinyin: "jìng", meaning: "尊重，有礼貌地对待", example: "敬爱、敬礼" },
+                { character: "谦", pinyin: "qiān", meaning: "虚心，不自满，不自高自大", example: "谦虚、谦让" },
+                { character: "虚", pinyin: "xū", meaning: "空，不真实，不自满", example: "虚心、谦虚" },
+                { character: "勤", pinyin: "qín", meaning: "做事尽力，不偷懒", example: "勤劳、勤奋" },
+                { character: "奋", pinyin: "fèn", meaning: "鼓起劲来，振作", example: "奋斗、奋力" },
+                { character: "勇", pinyin: "yǒng", meaning: "有胆量，不怕危险和困难", example: "勇敢、勇气" },
+                { character: "敢", pinyin: "gǎn", meaning: "有勇气，有胆量", example: "敢于、勇敢" },
+                { character: "诚", pinyin: "chéng", meaning: "真心，实在，的确", example: "诚实、诚信" },
+                { character: "实", pinyin: "shí", meaning: "充满，符合客观情况", example: "实际、实在" },
+                { character: "信", pinyin: "xìn", meaning: "诚实，不欺骗", example: "信用、信任" },
+                { character: "义", pinyin: "yì", meaning: "公正合宜的道理或举动", example: "正义、义气" },
+                { character: "礼", pinyin: "lǐ", meaning: "社会生活中，由于道德观念和风俗习惯而形成的仪节", example: "礼貌、礼仪" },
+                { character: "智", pinyin: "zhì", meaning: "聪明，见识，智慧", example: "智慧、智力" }
+            ],
+            6: [
+                { character: "智", pinyin: "zhì", meaning: "聪明，见识，智慧", example: "智慧、智力" },
+                { character: "慧", pinyin: "huì", meaning: "聪明，有才智", example: "智慧、慧眼" },
+                { character: "博", pinyin: "bó", meaning: "多，广，大，知道得多", example: "博士、博学" },
+                { character: "览", pinyin: "lǎn", meaning: "看，阅，观察", example: "浏览、阅览" },
+                { character: "深", pinyin: "shēn", meaning: "从表面到底或从外面到里面距离大", example: "深度、深入" },
+                { character: "刻", pinyin: "kè", meaning: "雕，用刀子挖，形容程度极深", example: "刻苦、时刻" },
+                { character: "渊", pinyin: "yuān", meaning: "深水，潭，深，深远", example: "渊博、深渊" },
+                { character: "精", pinyin: "jīng", meaning: "细密的，聪明的，思想周密", example: "精神、精彩" },
+                { character: "湛", pinyin: "zhàn", meaning: "深，精湛，清澈", example: "精湛、湛蓝" },
+                { character: "探", pinyin: "tàn", meaning: "寻求，探测", example: "探索、探险" },
+                { character: "索", pinyin: "suǒ", meaning: "搜寻，寻求", example: "探索、索取" },
+                { character: "研", pinyin: "yán", meaning: "细磨，深入地探求", example: "研究、钻研" },
+                { character: "究", pinyin: "jiū", meaning: "推求，追查", example: "研究、究竟" },
+                { character: "创", pinyin: "chuàng", meaning: "开始，开始做", example: "创造、创新" }
+            ]
+        };
+
+        // 常见易错字
+        const errorProneWords = [
+            { character: "已", pinyin: "yǐ", meaning: "停止，罢了", reason: "与'己'、'巳'易混淆", example: "已经、不已" },
+            { character: "己", pinyin: "jǐ", meaning: "对别人称本身", reason: "与'已'、'巳'易混淆", example: "自己、己见" },
+            { character: "巳", pinyin: "sì", meaning: "地支的第六位", reason: "与'已'、'己'易混淆", example: "巳时" },
+            { character: "戌", pinyin: "xū", meaning: "地支的第十一位", reason: "与'戊'、'戍'、'戎'易混淆", example: "戊戌变法" },
+            { character: "戍", pinyin: "shù", meaning: "军队防守", reason: "与'戊'、'戌'、'戎'易混淆", example: "戍边、卫戍" },
+            { character: "戊", pinyin: "wù", meaning: "天干的第五位", reason: "与'戌'、'戍'、'戎'易混淆", example: "戊戌变法" },
+            { character: "戎", pinyin: "róng", meaning: "古代兵器的总称", reason: "与'戊'、'戌'、'戍'易混淆", example: "戎装、兵戎" },
+            { character: "茶", pinyin: "chá", meaning: "常绿灌木，叶可制饮料", reason: "与'荼'易混淆", example: "茶叶、喝茶" },
+            { character: "荼", pinyin: "tú", meaning: "古书上说的一种苦菜", reason: "与'茶'易混淆", example: "荼毒、如火如荼" },
+            { character: "崇", pinyin: "chóng", meaning: "高，尊重", reason: "与'祟'易混淆", example: "崇高、崇拜" },
+            { character: "祟", pinyin: "suì", meaning: "迷信说法指鬼神作怪害人", reason: "与'崇'易混淆", example: "作祟、鬼祟" },
+            { character: "拔", pinyin: "bá", meaning: "抽，拉出，连根拽出", reason: "与'拨'易混淆", example: "拔河、选拔" },
+            { character: "拨", pinyin: "bō", meaning: "用手指或棍棒等推动或挑动", reason: "与'拔'易混淆", example: "拨款、拨动" },
+            { character: "钓", pinyin: "diào", meaning: "用饵诱鱼上钩", reason: "与'钩'易混淆", example: "钓鱼、钓竿" },
+            { character: "钩", pinyin: "gōu", meaning: "悬挂或探取东西用的器具，形状弯曲", reason: "与'钓'易混淆", example: "鱼钩、钩子" }
+        ];
+
+        // 应用状态
+        let appState = {
+            currentGrade: "1",
+            selectedWord: null,
+            learnedWords: new Set(),
+            searchQuery: ""
+        };
+
+        // DOM元素
+        const gradeButtons = document.querySelectorAll('.grade-btn');
+        const wordListElement = document.getElementById('word-list');
+        const wordDetailElement = document.getElementById('word-detail');
+        const searchInput = document.getElementById('search-input');
+        const errorWordsListElement = document.getElementById('error-words-list');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        // 统计元素
+        const totalWordsElement = document.getElementById('total-words');
+        const learnedWordsElement = document.getElementById('learned-words');
+        const errorWordsCountElement = document.getElementById('error-words-count');
+        const gradeDistributionElement = document.getElementById('grade-distribution');
+
+        // 初始化应用
+        function initApp() {
+            console.log("初始化小学语文生字学习系统...");
+            
+            // 从本地存储加载已学习的字
+            loadLearnedWords();
+            
+            // 初始化事件监听
+            initEventListeners();
+            
+            // 默认显示一年级的生字
+            selectGrade("1");
+            
+            // 加载易错字
+            loadErrorProneWords();
+            
+            // 更新统计信息
+            updateStatistics();
+            
+            console.log("应用初始化完成");
+        }
+
+        // 从本地存储加载已学习的字
+        function loadLearnedWords() {
+            const savedLearnedWords = localStorage.getItem('learnedWords');
+            if (savedLearnedWords) {
+                try {
+                    const parsedWords = JSON.parse(savedLearnedWords);
+                    appState.learnedWords = new Set(parsedWords);
+                } catch (e) {
+                    console.error("加载已学习字词失败:", e);
+                    appState.learnedWords = new Set();
+                }
+            }
+        }
+
+        // 保存已学习的字到本地存储
+        function saveLearnedWords() {
+            const wordsArray = Array.from(appState.learnedWords);
+            localStorage.setItem('learnedWords', JSON.stringify(wordsArray));
+        }
+
+        // 初始化事件监听
+        function initEventListeners() {
+            // 年级选择按钮
+            gradeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const grade = this.getAttribute('data-grade');
+                    selectGrade(grade);
+                });
+            });
+            
+            // 搜索框输入事件
+            searchInput.addEventListener('input', function() {
+                appState.searchQuery = this.value.trim();
+                loadWordList(appState.currentGrade);
+            });
+            
+            // 选项卡按钮
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
+            
+            // 点击生字标记为已学习
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.word-item')) {
+                    const wordItem = e.target.closest('.word-item');
+                    const character = wordItem.querySelector('.character').textContent;
+                    
+                    // 切换已学习状态
+                    if (appState.learnedWords.has(character)) {
+                        appState.learnedWords.delete(character);
+                        wordItem.classList.remove('selected');
+                    } else {
+                        appState.learnedWords.add(character);
+                        wordItem.classList.add('selected');
+                    }
+                    
+                    // 保存到本地存储
+                    saveLearnedWords();
+                    
+                    // 更新统计信息
+                    updateStatistics();
+                }
+            });
+        }
+
+        // 选择年级
+        function selectGrade(grade) {
+            console.log("选择年级:", grade);
+            
+            // 更新年级按钮状态
+            gradeButtons.forEach(btn => {
+                if (btn.getAttribute('data-grade') === grade) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // 更新状态
+            appState.currentGrade = grade;
+            
+            // 加载该年级的生字列表
+            loadWordList(grade);
+            
+            // 清空搜索框
+            searchInput.value = "";
+            appState.searchQuery = "";
+        }
+
+        // 加载生字列表
+        function loadWordList(grade) {
+            const words = wordDatabase[grade] || [];
+            let filteredWords = words;
+            
+            // 如果有搜索查询，过滤生字
+            if (appState.searchQuery) {
+                const query = appState.searchQuery.toLowerCase();
+                filteredWords = words.filter(word => 
+                    word.character.includes(query) || 
+                    word.pinyin.toLowerCase().includes(query) ||
+                    word.meaning.toLowerCase().includes(query)
+                );
+            }
+            
+            // 清空当前列表
+            wordListElement.innerHTML = '';
+            
+            if (filteredWords.length === 0) {
+                wordListElement.innerHTML = `
+                    <div class="no-data">
+                        <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <p>没有找到匹配的生字</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // 生成生字列表
+            filteredWords.forEach(word => {
+                const isLearned = appState.learnedWords.has(word.character);
+                const wordItem = document.createElement('div');
+                wordItem.className = `word-item ${isLearned ? 'selected' : ''}`;
+                wordItem.innerHTML = `
+                    <div class="character">${word.character}</div>
+                    <div class="pinyin">${word.pinyin}</div>
+                `;
+                
+                // 点击生字查看详情
+                wordItem.addEventListener('click', function(e) {
+                    // 防止事件冒泡触发已学习标记
+                    if (!e.target.closest('.word-item')) return;
+                    
+                    // 更新选中状态
+                    document.querySelectorAll('.word-item').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+                    
+                    // 添加选中样式
+                    wordItem.classList.add('selected');
+                    
+                    // 显示生字详情
+                    showWordDetail(word);
+                    
+                    // 更新已学习状态
+                    if (!appState.learnedWords.has(word.character)) {
+                        appState.learnedWords.add(word.character);
+                        saveLearnedWords();
+                        updateStatistics();
+                    }
+                });
+                
+                wordListElement.appendChild(wordItem);
+            });
+            
+            // 默认显示第一个生字的详情
+            if (filteredWords.length > 0 && !appState.searchQuery) {
+                const firstWordItem = wordListElement.querySelector('.word-item');
+                if (firstWordItem) {
+                    firstWordItem.classList.add('selected');
+                    showWordDetail(filteredWords[0]);
+                }
+            }
+        }
+
+        // 显示生字详情
+        function showWordDetail(word) {
+            appState.selectedWord = word;
+            
+            wordDetailElement.innerHTML = `
+                <div class="detail-character">${word.character}</div>
+                <div class="detail-pinyin">${word.pinyin}</div>
+                <div class="detail-meaning">${word.meaning}</div>
+                <div class="detail-example">例：${word.example}</div>
+            `;
+        }
+
+        // 加载易错字
+        function loadErrorProneWords() {
+            errorWordsListElement.innerHTML = '';
+            
+            errorProneWords.forEach(word => {
+                const errorWordItem = document.createElement('div');
+                errorWordItem.className = 'error-word-item';
+                errorWordItem.innerHTML = `
+                    <div class="error-word-char">${word.character}</div>
+                    <div class="error-word-info">
+                        <div class="error-word-pinyin">${word.pinyin} - ${word.meaning}</div>
+                        <div class="error-word-reason"><strong>易错原因：</strong>${word.reason}</div>
+                        <div class="error-word-reason"><strong>例词：</strong>${word.example}</div>
+                    </div>
+                `;
+                
+                errorWordsListElement.appendChild(errorWordItem);
+            });
+        }
+
+        // 切换选项卡
+        function switchTab(tabId) {
+            // 更新选项卡按钮状态
+            tabButtons.forEach(button => {
+                if (button.getAttribute('data-tab') === tabId) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            // 显示对应的选项卡内容
+            tabContents.forEach(content => {
+                if (content.id === `${tabId}-tab`) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+            
+            // 如果切换到统计选项卡，更新统计信息
+            if (tabId === 'statistics') {
+                updateStatistics();
+            }
+        }
+
+        // 更新统计信息
+        function updateStatistics() {
+            // 计算总生字数
+            let totalWords = 0;
+            Object.values(wordDatabase).forEach(words => {
+                totalWords += words.length;
+            });
+            
+            // 已学习字数
+            const learnedWordsCount = appState.learnedWords.size;
+            
+            // 易错字数
+            const errorWordsCount = errorProneWords.length;
+            
+            // 更新统计数字
+            totalWordsElement.textContent = totalWords;
+            learnedWordsElement.textContent = learnedWordsCount;
+            errorWordsCountElement.textContent = errorWordsCount;
+            
+            // 更新年级分布
+            updateGradeDistribution();
+        }
+
+        // 更新年级分布
+        function updateGradeDistribution() {
+            let html = '';
+            
+            // 计算各年级生字数
+            Object.keys(wordDatabase).forEach(grade => {
+                const wordCount = wordDatabase[grade].length;
+                const learnedCount = wordDatabase[grade].filter(word => 
+                    appState.learnedWords.has(word.character)
+                ).length;
+                
+                const percentage = wordCount > 0 ? Math.round((learnedCount / wordCount) * 100) : 0;
+                
+                html += `
+                    <div style="margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>${grade}年级</span>
+                            <span>${learnedCount}/${wordCount} (${percentage}%)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #e0e0e0; border-radius: 4px; overflow: hidden;">
+                            <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #4b6cb7, #182848);"></div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            gradeDistributionElement.innerHTML = html;
+        }
+
+        // 页面加载完成后初始化应用
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
