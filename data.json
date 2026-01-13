@@ -2202,18 +2202,2489 @@
   {
     "grade": "二年级上册",
     "characters": [
-      {
-        "word": "明",
-        "pinyin": "míng",
-        "words": ["明天", "明白", "明亮"],
-        "sentence": "明天我们要去公园玩。"
+       {
+        "word": "宜",
+        "pinyin": "yí",
+        "words": ["适宜", "便宜"],
+        "sentence": "桂花盛开，气候宜人。"
       },
       {
-        "word": "亮",
-        "pinyin": "liàng",
-        "words": ["明亮", "亮光", "天亮"],
-        "sentence": "房间的灯光很明亮。"
+        "word": "层",
+        "pinyin": "céng",
+        "words": ["楼层", "云层"],
+        "sentence": "云层层层叠叠，像绿色波浪。"
+      },
+      {
+        "word": "尽",
+        "pinyin": "jìn",
+        "words": ["尽头", "用尽"],
+        "sentence": "飞流直下三千尺，疑是银河落九天。"
+      },
+      {
+        "word": "染",
+        "pinyin": "rǎn",
+        "words": ["染色", "污染"],
+        "sentence": "枫叶红得像被秋染过。"
+      },
+      {
+        "word": "叠",
+        "pinyin": "dié",
+        "words": ["重叠", "折叠"],
+        "sentence": "远山叠翠，如画一般。"
+      },
+      {
+        "word": "翠",
+        "pinyin": "cuì",
+        "words": ["翠绿", "翠竹"],
+        "sentence": "两岸青山相对出，孤帆一片日边来。"
+      },
+      {
+        "word": "爽",
+        "pinyin": "shuǎng",
+        "words": ["凉爽", "清爽"],
+        "sentence": "秋高气爽，大雁南飞。"
+      },
+      {
+        "word": "壮",
+        "pinyin": "zhuàng",
+        "words": ["壮观", "强壮"],
+        "sentence": "天安门广场非常壮观。"
+      },
+      {
+        "word": "谷",
+        "pinyin": "gǔ",
+        "words": ["山谷", "五谷"],
+        "sentence": "山谷里回荡着歌声。"
+      },
+      {
+        "word": "登",
+        "pinyin": "dēng",
+        "words": ["登山", "登记"],
+        "sentence": "我们登上长城。"
+      },
+      {
+        "word": "华",
+        "pinyin": "huá",
+        "words": ["中华", "华丽"],
+        "sentence": "中华民族是一家。"
+      },
+      {
+        "word": "章",
+        "pinyin": "zhāng",
+        "words": ["文章", "章程"],
+        "sentence": "这篇文章写得真美。"
+      },
+      {
+        "word": "厦",
+        "pinyin": "shà",
+        "words": ["大厦", "厦门"],
+        "sentence": "高楼大厦拔地而起。"
+      },
+      {
+        "word": "阔",
+        "pinyin": "kuò",
+        "words": ["广阔", "开阔"],
+        "sentence": "我们的视野要更加开阔。"
+      },
+      {
+        "word": "碑",
+        "pinyin": "bēi",
+        "words": ["石碑", "纪念碑"],
+        "sentence": "人民英雄纪念碑高高矗立。"
+      },
+      {
+        "word": "迹",
+        "pinyin": "jì",
+        "words": ["足迹", "奇迹"],
+        "sentence": "雷锋的足迹留在我们心里。"
+      },
+      {
+        "word": "央",
+        "pinyin": "yāng",
+        "words": ["中央", "央求"],
+        "sentence": "天安门位于北京市中央。"
+      },
+      {
+        "word": "瓦",
+        "pinyin": "wǎ",
+        "words": ["瓦片", "瓦房"],
+        "sentence": "四合院铺着灰色瓦片。"
+      },
+      {
+        "word": "严",
+        "pinyin": "yán",
+        "words": ["庄严", "严厉"],
+        "sentence": "升旗仪式庄严隆重。"
+      },
+      {
+        "word": "雄",
+        "pinyin": "xióng",
+        "words": ["雄伟", "英雄"],
+        "sentence": "长城雄伟壮观。"
+      },
+      {
+        "word": "厅",
+        "pinyin": "tīng",
+        "words": ["大厅", "客厅"],
+        "sentence": "宽敞的大厅里人头攒动。"
+      },
+      {
+        "word": "候",
+        "pinyin": "hòu",
+        "words": ["等候", "候车"],
+        "sentence": "我们在候车室排队。"
+      },
+      {
+        "word": "礼",
+        "pinyin": "lǐ",
+        "words": ["礼貌", "礼节"],
+        "sentence": "见到师长要有礼貌。"
+      },
+      {
+        "word": "仪",
+        "pinyin": "yí",
+        "words": ["仪式", "仪表"],
+        "sentence": "升旗仪式现在开始。"
+      },
+      {
+        "word": "式",
+        "pinyin": "shì",
+        "words": ["方式", "形式"],
+        "sentence": "他用不同的方式表达爱。"
+      },
+      {
+        "word": "旗",
+        "pinyin": "qí",
+        "words": ["国旗", "旗帜"],
+        "sentence": "鲜艳的国旗迎风飘扬。"
+      },
+      {
+        "word": "仗",
+        "pinyin": "zhàng",
+        "words": ["打仗", "仪仗"],
+        "sentence": "战士们英勇打仗。"
+      },
+      {
+        "word": "队",
+        "pinyin": "duì",
+        "words": ["队伍", "少先队"],
+        "sentence": "少先队队歌嘹亮。"
+      },
+      {
+        "word": "鼓",
+        "pinyin": "gǔ",
+        "words": ["大鼓", "鼓励"],
+        "sentence": "鼓号队敲起欢乐鼓。"
+      },
+      {
+        "word": "号",
+        "pinyin": "hào",
+        "words": ["口号", "号角"],
+        "sentence": "冲锋号角响彻云霄。"
+      },
+      {
+        "word": "迈",
+        "pinyin": "mài",
+        "words": ["迈步", "年迈"],
+        "sentence": "我们迈着整齐步伐。"
+      },
+      {
+        "word": "步",
+        "pinyin": "bù",
+        "words": ["步伐", "脚步"],
+        "sentence": "脚步声响彻广场。"
+      },
+      {
+        "word": "伐",
+        "pinyin": "fá",
+        "words": ["步伐", "砍伐"],
+        "sentence": "保持整齐的步伐。"
+      },
+      {
+        "word": "统",
+        "pinyin": "tǒng",
+        "words": ["统一", "传统"],
+        "sentence": "中华民族传统美德。"
+      },
+      {
+        "word": "传",
+        "pinyin": "chuán",
+        "words": ["传统", "传播"],
+        "sentence": "我们要传承红色基因。"
+      },
+      {
+        "word": "领",
+        "pinyin": "lǐng",
+        "words": ["带领", "红领巾"],
+        "sentence": "红领巾在胸前飘扬。"
+      },
+      {
+        "word": "巾",
+        "pinyin": "jīn",
+        "words": ["毛巾", "红领巾"],
+        "sentence": "他用毛巾擦汗。"
+      },
+      {
+        "word": "佩",
+        "pinyin": "pèi",
+        "words": ["佩戴", "佩服"],
+        "sentence": "佩戴红领巾很自豪。"
+      },
+      {
+        "word": "戴",
+        "pinyin": "dài",
+        "words": ["穿戴", "爱戴"],
+        "sentence": "爱戴老师学知识。"
+      },
+      {
+        "word": "冠",
+        "pinyin": "guān",
+        "words": ["皇冠", "鸡冠"],
+        "sentence": "鸡冠像火一样红。"
+      },
+      {
+        "word": "幅",
+        "pinyin": "fú",
+        "words": ["一幅", "幅度"],
+        "sentence": "墙上挂着一幅画。"
+      },
+      {
+        "word": "画",
+        "pinyin": "huà",
+        "words": ["图画", "画家"],
+        "sentence": "画家描绘家乡美。"
+      },
+      {
+        "word": "卷",
+        "pinyin": "juàn",
+        "words": ["画卷", "试卷"],
+        "sentence": "展开美丽的画卷。"
+      },
+      {
+        "word": "轴",
+        "pinyin": "zhóu",
+        "words": ["画轴", "轴承"],
+        "sentence": "画轴慢慢拉开。"
+      },
+      {
+        "word": "墨",
+        "pinyin": "mò",
+        "words": ["墨水", "墨绿"],
+        "sentence": "墨水瓶打翻了。"
+      },
+      {
+        "word": "笔",
+        "pinyin": "bǐ",
+        "words": ["毛笔", "笔画"],
+        "sentence": "毛笔字写得很棒。"
+      },
+      {
+        "word": "砚",
+        "pinyin": "yàn",
+        "words": ["砚台", "端砚"],
+        "sentence": "砚台里的墨汁浓浓的。"
+      },
+      {
+        "word": "纸",
+        "pinyin": "zhǐ",
+        "words": ["白纸", "报纸"],
+        "sentence": "白纸可以画画。"
+      },
+      {
+        "word": "宣",
+        "pinyin": "xuān",
+        "words": ["宣纸", "宣布"],
+        "sentence": "宣纸适合写毛笔字。"
+      },
+      {
+        "word": "染",
+        "pinyin": "rǎn",
+        "words": ["染色", "染布"],
+        "sentence": "染布需要耐心。"
+      },
+      {
+        "word": "色",
+        "pinyin": "sè",
+        "words": ["颜色", "色彩"],
+        "sentence": "颜色搭配要协调。"
+      },
+      {
+        "word": "彩",
+        "pinyin": "cǎi",
+        "words": ["彩色", "彩虹"],
+        "sentence": "雨后出现美丽的彩虹。"
+      },
+      {
+        "word": "颜",
+        "pinyin": "yán",
+        "words": ["颜色", "颜面"],
+        "sentence": "颜色真鲜艳。"
+      },
+      {
+        "word": "料",
+        "pinyin": "liào",
+        "words": ["颜料", "资料"],
+        "sentence": "颜料混合变新色。"
+      },
+      {
+        "word": "油",
+        "pinyin": "yóu",
+        "words": ["油画", "汽油"],
+        "sentence": "油画色彩厚重。"
+      },
+      {
+        "word": "漆",
+        "pinyin": "qī",
+        "words": ["油漆", "漆黑"],
+        "sentence": "大门重新刷了油漆。"
+      },
+      {
+        "word": "抹",
+        "pinyin": "mǒ",
+        "words": ["涂抹", "抹黑"],
+        "sentence": "涂抹要均匀。"
+      },
+      {
+        "word": "涂",
+        "pinyin": "tú",
+        "words": ["涂色", "涂鸦"],
+        "sentence": "别在墙上乱涂。"
+      },
+      {
+        "word": "描",
+        "pinyin": "miáo",
+        "words": ["描写", "描绘"],
+        "sentence": "描写要具体生动。"
+      },
+      {
+        "word": "绘",
+        "pinyin": "huì",
+        "words": ["绘画", "描绘"],
+        "sentence": "他正在绘画风景。"
+      },
+      {
+        "word": "勾",
+        "pinyin": "gōu",
+        "words": ["勾线", "勾结"],
+        "sentence": "用细笔勾线。"
+      },
+      {
+        "word": "勒",
+        "pinyin": "lè",
+        "words": ["勾勒", "勒马"],
+        "sentence": "勾勒轮廓要准确。"
+      },
+      {
+        "word": "线",
+        "pinyin": "xiàn",
+        "words": ["线条", "直线"],
+        "sentence": "线条要流畅。"
+      },
+      {
+        "word": "条",
+        "pinyin": "tiáo",
+        "words": ["条件", "线条"],
+        "sentence": "这条线画得很直。"
+      },
+      {
+        "word": "浓",
+        "pinyin": "nóng",
+        "words": ["浓度", "浓眉"],
+        "sentence": "浓墨涂底色。"
+      },
+      {
+        "word": "淡",
+        "pinyin": "dàn",
+        "words": ["淡水", "清淡"],
+        "sentence": "淡墨晕染远山。"
+      },
+      {
+        "word": "干",
+        "pinyin": "gān",
+        "words": ["干燥", "干净"],
+        "sentence": "画面要干净。"
+      },
+      {
+        "word": "湿",
+        "pinyin": "shī",
+        "words": ["湿润", "潮湿"],
+        "sentence": "湿润颜色易渗透。"
+      },
+      {
+        "word": "晕",
+        "pinyin": "yūn",
+        "words": ["晕染", "头晕"],
+        "sentence": "晕染过渡自然。"
+      },
+      {
+        "word": "层",
+        "pinyin": "céng",
+        "words": ["层次", "楼层"],
+        "sentence": "层次分明效果好。"
+      },
+      {
+        "word": "次",
+        "pinyin": "cì",
+        "words": ["次数", "名次"],
+        "sentence": "练习次数要多。"
+      },
+      {
+        "word": "叠",
+        "pinyin": "dié",
+        "words": ["重叠", "折叠"],
+        "sentence": "远山层层叠叠。"
+      },
+      {
+        "word": "重",
+        "pinyin": "chóng",
+        "words": ["重复", "重新"],
+        "sentence": "重新修改画面。"
+      },
+      {
+        "word": "复",
+        "pinyin": "fù",
+        "words": ["复习", "复杂"],
+        "sentence": "构图不要太复杂。"
+      },
+      {
+        "word": "杂",
+        "pinyin": "zá",
+        "words": ["复杂", "杂乱"],
+        "sentence": "杂乱线条要整理。"
+      },
+      {
+        "word": "理",
+        "pinyin": "lǐ",
+        "words": ["整理", "道理"],
+        "sentence": "整理绘画工具。"
+      },
+      {
+        "word": "整",
+        "pinyin": "zhěng",
+        "words": ["整齐", "完整"],
+        "sentence": "完整作品才美观。"
+      },
+      {
+        "word": "齐",
+        "pinyin": "qí",
+        "words": ["整齐", "对齐"],
+        "sentence": "对齐画面边缘。"
+      },
+      {
+        "word": "洁",
+        "pinyin": "jié",
+        "words": ["整洁", "清洁"],
+        "sentence": "保持画面整洁。"
+      },
+      {
+        "word": "净",
+        "pinyin": "jìng",
+        "words": ["干净", "纯净"],
+        "sentence": "纯净颜色最漂亮。"
+      },
+      {
+        "word": "纯",
+        "pinyin": "chún",
+        "words": ["纯洁", "单纯"],
+        "sentence": "单纯色调也美。"
+      },
+      {
+        "word": "正",
+        "pinyin": "zhèng",
+        "words": ["端正", "正确"],
+        "sentence": "坐姿要端正。"
+      },
+      {
+        "word": "确",
+        "pinyin": "què",
+        "words": ["确定", "准确"],
+        "sentence": "准确勾勒形状。"
+      },
+      {
+        "word": "准",
+        "pinyin": "zhǔn",
+        "words": ["准备", "标准"],
+        "sentence": "准备绘画工具。"
+      },
+      {
+        "word": "标",
+        "pinyin": "biāo",
+        "words": ["目标", "标签"],
+        "sentence": "目标要明确。"
+      },
+      {
+        "word": "参",
+        "pinyin": "cān",
+        "words": ["参加", "参考"],
+        "sentence": "参加绘画比赛。"
+      },
+      {
+        "word": "赛",
+        "pinyin": "sài",
+        "words": ["比赛", "赛车"],
+        "sentence": "比赛获得第一名。"
+      },
+      {
+        "word": "评",
+        "pinyin": "píng",
+        "words": ["评比", "评价"],
+        "sentence": "评价作品优缺点。"
+      },
+      {
+        "word": "奖",
+        "pinyin": "jiǎng",
+        "words": ["奖励", "奖状"],
+        "sentence": "颁发奖状给优秀者。"
+      },
+      {
+        "word": "状",
+        "pinyin": "zhuàng",
+        "words": ["奖状", "状况"],
+        "sentence": "奖状贴在墙上。"
+      },
+      {
+        "word": "励",
+        "pinyin": "lì",
+        "words": ["鼓励", "激励"],
+        "sentence": "老师鼓励我们继续画。"
+      },
+      {
+        "word": "激",
+        "pinyin": "jī",
+        "words": ["激动", "刺激"],
+        "sentence": "听到好消息很激动。"
+      },
+      {
+        "word": "继",
+        "pinyin": "jì",
+        "words": ["继续", "继承"],
+        "sentence": "继续努力画下去。"
+      },
+      {
+        "word": "续",
+        "pinyin": "xù",
+        "words": ["继续", "连续"],
+        "sentence": "连续画了三小时。"
+      },
+      {
+        "word": "努",
+        "pinyin": "nǔ",
+        "words": ["努力", "努嘴"],
+        "sentence": "努力才会成功。"
+      },
+      {
+        "word": "力",
+        "pinyin": "lì",
+        "words": ["力气", "能力"],
+        "sentence": "能力逐渐提高。"
+      },
+      {
+        "word": "进",
+        "pinyin": "jìn",
+        "words": ["进步", "前进"],
+        "sentence": "每天都有新进步。"
+      },
+      {
+        "word": "步",
+        "pinyin": "bù",
+        "words": ["步伐", "脚步"],
+        "sentence": "脚步更加稳健。"
+      },
+      {
+        "word": "晨",
+        "pinyin": "chén",
+        "words": ["清晨", "晨读"],
+        "sentence": "清晨空气真新鲜。"
+      },
+      {
+        "word": "雾",
+        "pinyin": "wù",
+        "words": ["大雾", "雾气"],
+        "sentence": "山谷里雾气腾腾。"
+      },
+      {
+        "word": "朝",
+        "pinyin": "cháo",
+        "words": ["朝代", "朝着"],
+        "sentence": "朝着目标前进。"
+      },
+      {
+        "word": "霞",
+        "pinyin": "xiá",
+        "words": ["朝霞", "晚霞"],
+        "sentence": "晚霞映红天空。"
+      },
+      {
+        "word": "霜",
+        "pinyin": "shuāng",
+        "words": ["秋霜", "霜降"],
+        "sentence": "秋霜染红叶。"
+      },
+      {
+        "word": "降",
+        "pinyin": "jiàng",
+        "words": ["降落", "下降"],
+        "sentence": "飞机缓缓降落。"
+      },
+      {
+        "word": "凌",
+        "pinyin": "líng",
+        "words": ["凌空", "凌乱"],
+        "sentence": "风筝凌空飞舞。"
+      },
+      {
+        "word": "零",
+        "pinyin": "líng",
+        "words": ["零分", "零件"],
+        "sentence": "零件缺一不可。"
+      },
+      {
+        "word": "偏",
+        "pinyin": "piān",
+        "words": ["偏僻", "偏心"],
+        "sentence": "偏僻山村通路了。"
+      },
+      {
+        "word": "僻",
+        "pinyin": "pì",
+        "words": ["僻静", "怪僻"],
+        "sentence": "僻静的小路。"
+      }  
+    ]
+  },
+   {
+    "grade": "二年级下册",
+    "characters": [
+        {
+        "word": "诗",
+        "pinyin": "shī",
+        "words": ["古诗", "诗人"],
+        "sentence": "诗人写出了美丽春天。"
+      },
+      {
+        "word": "村",
+        "pinyin": "cūn",
+        "words": ["村子", "农村"],
+        "sentence": "村子前面有条小河。"
+      },
+      {
+        "word": "居",
+        "pinyin": "jū",
+        "words": ["居住", "居民"],
+        "sentence": "居民安居乐业。"
+      },
+      {
+        "word": "醉",
+        "pinyin": "zuì",
+        "words": ["喝醉", "陶醉"],
+        "sentence": "陶醉在美景中。"
+      },
+      {
+        "word": "烟",
+        "pinyin": "yān",
+        "words": ["烟雾", "炊烟"],
+        "sentence": "炊烟袅袅升起。"
+      },
+      {
+        "word": "童",
+        "pinyin": "tóng",
+        "words": ["儿童", "童年"],
+        "sentence": "童年生活真快乐。"
+      },
+      {
+        "word": "散",
+        "pinyin": "sàn",
+        "words": ["散步", "分散"],
+        "sentence": "放学后去公园散步。"
+      },
+      {
+        "word": "忙",
+        "pinyin": "máng",
+        "words": ["帮忙", "匆忙"],
+        "sentence": "妈妈忙着做饭。"
+      },
+      {
+        "word": "归",
+        "pinyin": "guī",
+        "words": ["归来", "回归"],
+        "sentence": "孩子放学归来早。"
+      },
+      {
+        "word": "趁",
+        "pinyin": "chèn",
+        "words": ["趁机", "趁早"],
+        "sentence": "趁早完成作业。"
+      },
+      {
+        "word": "纸",
+        "pinyin": "zhǐ",
+        "words": ["彩纸", "白纸"],
+        "sentence": "彩纸折出千纸鹤。"
+      },
+      {
+        "word": "鸢",
+        "pinyin": "yuān",
+        "words": ["纸鸢", "老鹰"],
+        "sentence": "纸鸢飞上蓝天。"
+      },
+      {
+        "word": "剪",
+        "pinyin": "jiǎn",
+        "words": ["剪纸", "剪刀"],
+        "sentence": "剪纸需要细心。"
+      },
+      {
+        "word": "窗",
+        "pinyin": "chuāng",
+        "words": ["窗户", "窗台"],
+        "sentence": "窗台摆着花盆。"
+      },
+      {
+        "word": "碧",
+        "pinyin": "bì",
+        "words": ["碧绿", "碧玉"],
+        "sentence": "碧玉妆成一树高。"
+      },
+      {
+        "word": "妆",
+        "pinyin": "zhuāng",
+        "words": ["化妆", "红妆"],
+        "sentence": "红妆素裹分外妖娆。"
+      },
+      {
+        "word": "绿",
+        "pinyin": "lǜ",
+        "words": ["绿色", "绿豆"],
+        "sentence": "绿色叶子真新鲜。"
+      },
+      {
+        "word": "丝",
+        "pinyin": "sī",
+        "words": ["丝瓜", "粉丝"],
+        "sentence": "丝瓜络可刷锅。"
+      },
+      {
+        "word": "冲",
+        "pinyin": "chōng",
+        "words": ["冲动", "冲破"],
+        "sentence": "冲动是魔鬼。"
+      },
+      {
+        "word": "寻",
+        "pinyin": "xún",
+        "words": ["寻找", "寻人"],
+        "sentence": "寻找春天的足迹。"
+      },
+      {
+        "word": "姑",
+        "pinyin": "gū",
+        "words": ["姑娘", "姑姑"],
+        "sentence": "姑娘采茶忙。"
+      },
+      {
+        "word": "娘",
+        "pinyin": "niáng",
+        "words": ["姑娘", "新娘"],
+        "sentence": "新娘真美丽。"
+      },
+      {
+        "word": "吐",
+        "pinyin": "tǔ",
+        "words": ["吐气", "谈吐"],
+        "sentence": "谈吐要文雅。"
+      },
+      {
+        "word": "柳",
+        "pinyin": "liǔ",
+        "words": ["柳树", "柳枝"],
+        "sentence": "柳枝随风摇曳。"
+      },
+      {
+        "word": "荡",
+        "pinyin": "dàng",
+        "words": ["荡漾", "飘荡"],
+        "sentence": "湖水荡漾波纹。"
+      },
+      {
+        "word": "桃",
+        "pinyin": "táo",
+        "words": ["桃花", "桃子"],
+        "sentence": "桃花朵朵开。"
+      },
+      {
+        "word": "杏",
+        "pinyin": "xìng",
+        "words": ["杏花", "杏仁"],
+        "sentence": "杏花白如雪。"
+      },
+      {
+        "word": "鲜",
+        "pinyin": "xiān",
+        "words": ["鲜花", "新鲜"],
+        "sentence": "鲜花朵朵香。"
+      },
+      {
+        "word": "邮",
+        "pinyin": "yóu",
+        "words": ["邮票", "邮递"],
+        "sentence": "邮递员送信忙。"
+      },
+      {
+        "word": "递",
+        "pinyin": "dì",
+        "words": ["传递", "邮递"],
+        "sentence": "传递正能量。"
+      },
+      {
+        "word": "员",
+        "pinyin": "yuán",
+        "words": ["员工", "邮递员"],
+        "sentence": "员工齐努力。"
+      },
+      {
+        "word": "原",
+        "pinyin": "yuán",
+        "words": ["原来", "草原"],
+        "sentence": "草原绿油油。"
+      },
+      {
+        "word": "叔",
+        "pinyin": "shū",
+        "words": ["叔叔", "大叔"],
+        "sentence": "大叔讲故事。"
+      },
+      {
+        "word": "局",
+        "pinyin": "jú",
+        "words": ["邮局", "公安局"],
+        "sentence": "公安局保平安。"
+      },
+      {
+        "word": "堆",
+        "pinyin": "duī",
+        "words": ["堆积", "土堆"],
+        "sentence": "土堆变高山。"
+      },
+      {
+        "word": "礼",
+        "pinyin": "lǐ",
+        "words": ["礼貌", "礼节"],
+        "sentence": "礼貌待人是美德。"
+      },
+      {
+        "word": "锋",
+        "pinyin": "fēng",
+        "words": ["锋利", "先锋"],
+        "sentence": "先锋队旗飘扬。"
+      },
+      {
+        "word": "昨",
+        "pinyin": "zuó",
+        "words": ["昨天", "昨夜"],
+        "sentence": "昨夜星光灿烂。"
+      },
+      {
+        "word": "冒",
+        "pinyin": "mào",
+        "words": ["冒险", "感冒"],
+        "sentence": "感冒要吃药。"
+      },
+      {
+        "word": "留",
+        "pinyin": "liú",
+        "words": ["留下", "留学"],
+        "sentence": "留下美好回忆。"
+      },
+      {
+        "word": "弯",
+        "pinyin": "wān",
+        "words": ["弯曲", "弯腰"],
+        "sentence": "弯腰拾落叶。"
+      },
+      {
+        "word": "背",
+        "pinyin": "bēi",
+        "words": ["背包", "背走"],
+        "sentence": "背走小书包。"
+      },
+      {
+        "word": "洒",
+        "pinyin": "sǎ",
+        "words": ["洒水", "洒落"],
+        "sentence": "洒落珍珠雨。"
+      },
+      {
+        "word": "温",
+        "pinyin": "wēn",
+        "words": ["温暖", "温水"],
+        "sentence": "温暖如春风。"
+      },
+      {
+        "word": "暖",
+        "pinyin": "nuǎn",
+        "words": ["暖和", "暖气"],
+        "sentence": "暖气驱寒冷。"
+      },
+      {
+        "word": "能",
+        "pinyin": "néng",
+        "words": ["能力", "才能"],
+        "sentence": "能力靠培养。"
+      },
+      {
+        "word": "桌",
+        "pinyin": "zhuō",
+        "words": ["书桌", "课桌"],
+        "sentence": "课桌排整齐。"
+      },
+      {
+        "word": "味",
+        "pinyin": "wèi",
+        "words": ["味道", "香味"],
+        "sentence": "香味扑鼻来。"
+      },
+      {
+        "word": "买",
+        "pinyin": "mǎi",
+        "words": ["买卖", "买菜"],
+        "sentence": "买菜要新鲜。"
+      },
+      {
+        "word": "具",
+        "pinyin": "jù",
+        "words": ["工具", "文具"],
+        "sentence": "文具盒里装。"
+      },
+      {
+        "word": "甘",
+        "pinyin": "gān",
+        "words": ["甘甜", "甘心"],
+        "sentence": "甘泉润心田。"
+      },
+      {
+        "word": "甜",
+        "pinyin": "tián",
+        "words": ["甜蜜", "甜味"],
+        "sentence": "甜味满心田。"
+      },
+      {
+        "word": "菜",
+        "pinyin": "cài",
+        "words": ["蔬菜", "青菜"],
+        "sentence": "青菜营养高。"
+      },
+      {
+        "word": "劳",
+        "pinyin": "láo",
+        "words": ["劳动", "辛劳"],
+        "sentence": "劳动最光荣。"
+      },
+      {
+        "word": "匹",
+        "pinyin": "pǐ",
+        "words": ["马匹", "布匹"],
+        "sentence": "布匹花样多。"
+      },
+      {
+        "word": "妹",
+        "pinyin": "mèi",
+        "words": ["妹妹", "小妹"],
+        "sentence": "小妹真可爱。"
+      },
+      {
+        "word": "波",
+        "pinyin": "bō",
+        "words": ["波浪", "声波"],
+        "sentence": "波浪滚滚来。"
+      },
+      {
+        "word": "纹",
+        "pinyin": "wén",
+        "words": ["花纹", "指纹"],
+        "sentence": "指纹辨身份。"
+      },
+      {
+        "word": "像",
+        "pinyin": "xiàng",
+        "words": ["画像", "好像"],
+        "sentence": "好像一朵花。"
+      },
+      {
+        "word": "景",
+        "pinyin": "jǐng",
+        "words": ["风景", "景色"],
+        "sentence": "景色真迷人。"
+      },
+      {
+        "word": "恋",
+        "pinyin": "liàn",
+        "words": ["留恋", "恋恋不舍"],
+        "sentence": "恋恋不舍家乡。"
+      },
+      {
+        "word": "舍",
+        "pinyin": "shě",
+        "words": ["舍得", "舍弃"],
+        "sentence": "舍弃坏习惯。"
+      },
+      {
+        "word": "求",
+        "pinyin": "qiú",
+        "words": ["请求", "要求"],
+        "sentence": "要求要严格。"
+      },
+      {
+        "word": "州",
+        "pinyin": "zhōu",
+        "words": ["神州", "杭州"],
+        "sentence": "神州大地美。"
+      },
+      {
+        "word": "湾",
+        "pinyin": "wān",
+        "words": ["海湾", "台湾"],
+        "sentence": "台湾是宝岛。"
+      },
+      {
+        "word": "岛",
+        "pinyin": "dǎo",
+        "words": ["小岛", "岛屿"],
+        "sentence": "岛屿星罗棋布。"
+      },
+      {
+        "word": "峡",
+        "pinyin": "xiá",
+        "words": ["海峡", "峡谷"],
+        "sentence": "峡谷深又深。"
+      },
+      {
+        "word": "民",
+        "pinyin": "mín",
+        "words": ["人民", "民族"],
+        "sentence": "民族团结紧。"
+      },
+      {
+        "word": "族",
+        "pinyin": "zú",
+        "words": ["民族", "汉族"],
+        "sentence": "民族大家庭。"
+      },
+      {
+        "word": "谊",
+        "pinyin": "yì",
+        "words": ["友谊", "情谊"],
+        "sentence": "情谊比海深。"
+      },
+      {
+        "word": "齐",
+        "pinyin": "qí",
+        "words": ["整齐", "齐全"],
+        "sentence": "齐全无缺损。"
+      },
+      {
+        "word": "奋",
+        "pinyin": "fèn",
+        "words": ["奋斗", "兴奋"],
+        "sentence": "奋斗创未来。"
+      },
+      {
+        "word": "贴",
+        "pinyin": "tiē",
+        "words": ["粘贴", "贴纸"],
+        "sentence": "贴纸装饰墙。"
+      },
+      {
+        "word": "街",
+        "pinyin": "jiē",
+        "words": ["街道", "大街"],
+        "sentence": "大街真热闹。"
+      },
+      {
+        "word": "舟",
+        "pinyin": "zhōu",
+        "words": ["小舟", "龙舟"],
+        "sentence": "龙舟竞渡忙。"
+      },
+      {
+        "word": "艾",
+        "pinyin": "ài",
+        "words": ["艾草", "艾灸"],
+        "sentence": "艾灸祛寒湿。"
+      },
+      {
+        "word": "敬",
+        "pinyin": "jìng",
+        "words": ["敬礼", "尊敬"],
+        "sentence": "尊敬师长是美德。"
+      },
+      {
+        "word": "转",
+        "pinyin": "zhuǎn",
+        "words": ["转弯", "转动"],
+        "sentence": "转动小陀螺。"
+      },
+      {
+        "word": "团",
+        "pinyin": "tuán",
+        "words": ["团结", "团体"],
+        "sentence": "团结力量大。"
+      },
+      {
+        "word": "热",
+        "pinyin": "rè",
+        "words": ["热闹", "炎热"],
+        "sentence": "热闹集市挤。"
+      },
+      {
+        "word": "闹",
+        "pinyin": "nào",
+        "words": ["吵闹", "热闹"],
+        "sentence": "吵闹惹人烦。"
+      },
+      {
+        "word": "贝",
+        "pinyin": "bèi",
+        "words": ["贝壳", "宝贝"],
+        "sentence": "贝壳亮闪闪。"
+      },
+      {
+        "word": "壳",
+        "pinyin": "ké",
+        "words": ["贝壳", "外壳"],
+        "sentence": "外壳硬邦邦。"
+      },
+      {
+        "word": "甲",
+        "pinyin": "jiǎ",
+        "words": ["指甲", "甲鱼"],
+        "sentence": "指甲剪干净。"
+      },
+      {
+        "word": "骨",
+        "pinyin": "gǔ",
+        "words": ["骨头", "骨折"],
+        "sentence": "骨折要静养。"
+      },
+      {
+        "word": "钱",
+        "pinyin": "qián",
+        "words": ["金钱", "钱币"],
+        "sentence": "钱币辨真假。"
+      },
+      {
+        "word": "币",
+        "pinyin": "bì",
+        "words": ["货币", "硬币"],
+        "sentence": "硬币响叮当。"
+      },
+      {
+        "word": "与",
+        "pinyin": "yǔ",
+        "words": ["给与", "相与"],
+        "sentence": "相与为朋友。"
+      },
+      {
+        "word": "财",
+        "pinyin": "cái",
+        "words": ["财富", "财产"],
+        "sentence": "财产要保护。"
+      },
+      {
+        "word": "关",
+        "pinyin": "guān",
+        "words": ["关门", "关心"],
+        "sentence": "关心他人暖。"
+      },
+      {
+        "word": "烧",
+        "pinyin": "shāo",
+        "words": ["烧水", "烧烤"],
+        "sentence": "烧烤香味飘。"
+      },
+      {
+        "word": "茄",
+        "pinyin": "qié",
+        "words": ["茄子", "番茄"],
+        "sentence": "茄子紫莹莹。"
+      },
+      {
+        "word": "烤",
+        "pinyin": "kǎo",
+        "words": ["烧烤", "烤火"],
+        "sentence": "烤火暖融融。"
+      },
+      {
+        "word": "鸭",
+        "pinyin": "yā",
+        "words": ["鸭子", "烤鸭"],
+        "sentence": "烤鸭香又脆。"
+      },
+      {
+        "word": "肉",
+        "pinyin": "ròu",
+        "words": ["猪肉", "牛肉"],
+        "sentence": "牛肉有营养。"
+      },
+      {
+        "word": "鸡",
+        "pinyin": "jī",
+        "words": ["公鸡", "母鸡"],
+        "sentence": "母鸡下蛋忙。"
+      },
+      {
+        "word": "蛋",
+        "pinyin": "dàn",
+        "words": ["鸡蛋", "蛋糕"],
+        "sentence": "蛋糕甜又软。"
+      },
+      {
+        "word": "炒",
+        "pinyin": "chǎo",
+        "words": ["炒菜", "炒饭"],
+        "sentence": "炒饭香喷喷。"
+      },
+      {
+        "word": "饭",
+        "pinyin": "fàn",
+        "words": ["米饭", "吃饭"],
+        "sentence": "吃饭不挑食。"
+      },
+      {
+        "word": "盒",
+        "pinyin": "hé",
+        "words": ["盒子", "饭盒"],
+        "sentence": "饭盒要洗净。"
+      },
+      {
+        "word": "聊",
+        "pinyin": "liáo",
+        "words": ["聊天", "闲聊"],
+        "sentence": "闲聊心情好。"
+      },
+      {
+        "word": "坪",
+        "pinyin": "píng",
+        "words": ["草坪", "停机坪"],
+        "sentence": "草坪绿油油。"
+      },
+      {
+        "word": "郁",
+        "pinyin": "yù",
+        "words": ["郁闷", "浓郁"],
+        "sentence": "浓郁花香飘。"
+      },
+      {
+        "word": "囱",
+        "pinyin": "cōng",
+        "words": ["烟囱", "烟囱"],
+        "sentence": "烟囱冒白烟。"
+      },
+      {
+        "word": "般",
+        "pinyin": "bān",
+        "words": ["一般", "般配"],
+        "sentence": "般配才和谐。"
+      },
+      {
+        "word": "精",
+        "pinyin": "jīng",
+        "words": ["精神", "精彩"],
+        "sentence": "精彩节目多。"
+      },
+      {
+        "word": "叮",
+        "pinyin": "dīng",
+        "words": ["叮咛", "叮嘱"],
+        "sentence": "叮嘱记心间。"
+      },
+      {
+        "word": "咛",
+        "pinyin": "níng",
+        "words": ["叮咛", "咛咛"],
+        "sentence": "咛咛细语柔。"
+      },
+      {
+        "word": "渡",
+        "pinyin": "dù",
+        "words": ["渡河", "渡船"],
+        "sentence": "渡船过河忙。"
+      },
+      {
+        "word": "荫",
+        "pinyin": "yīn",
+        "words": ["树荫", "绿荫"],
+        "sentence": "绿荫好乘凉。"
+      },
+      {
+        "word": "蔽",
+        "pinyin": "bì",
+        "words": ["遮蔽", "隐蔽"],
+        "sentence": "隐蔽不露影。"
+      },
+      {
+        "word": "撑",
+        "pinyin": "chēng",
+        "words": ["撑伞", "支撑"],
+        "sentence": "撑伞挡烈日。"
+      },
+      {
+        "word": "拼",
+        "pinyin": "pīn",
+        "words": ["拼音", "拼命"],
+        "sentence": "拼命向前冲。"
+      },
+      {
+        "word": "母",
+        "pinyin": "mǔ",
+        "words": ["母亲", "母爱"],
+        "sentence": "母爱最伟大。"
+      },
+      {
+        "word": "冈",
+        "pinyin": "gāng",
+        "words": ["山冈", "井冈山"],
+        "sentence": "井冈山红旗飘。"
+      },
+      {
+        "word": "懂",
+        "pinyin": "dǒng",
+        "words": ["懂事", "懂得"],
+        "sentence": "懂得讲道理。"
+      },
+      {
+        "word": "案",
+        "pinyin": "àn",
+        "words": ["答案", "案件"],
+        "sentence": "案件要查清。"
+      },
+      {
+        "word": "堡",
+        "pinyin": "bǎo",
+        "words": ["城堡", "堡垒"],
+        "sentence": "城堡高又大。"
+      },
+      {
+        "word": "插",
+        "pinyin": "chā",
+        "words": ["插图", "插入"],
+        "sentence": "插入图片美。"
+      },
+      {
+        "word": "凶",
+        "pinyin": "xiōng",
+        "words": ["凶猛", "凶狠"],
+        "sentence": "凶狠豺狼吓。"
+      },
+      {
+        "word": "狠",
+        "pinyin": "hěn",
+        "words": ["狠心", "狠毒"],
+        "sentence": "狠毒蛇蝎心。"
+      },
+      {
+        "word": "补",
+        "pinyin": "bǔ",
+        "words": ["补充", "补丁"],
+        "sentence": "补丁缝衣服。"
+      },
+      {
+        "word": "充",
+        "pinyin": "chōng",
+        "words": ["充满", "充足"],
+        "sentence": "充足睡眠好。"
+      },
+      {
+        "word": "攻",
+        "pinyin": "gōng",
+        "words": ["攻击", "攻打"],
+        "sentence": "攻打敌人巢。"
+      },
+      {
+        "word": "商",
+        "pinyin": "shāng",
+        "words": ["商店", "商人"],
+        "sentence": "商人讲诚信。"
+      },
+      {
+        "word": "量",
+        "pinyin": "liáng",
+        "words": ["商量", "测量"],
+        "sentence": "测量要准确。"
+      },
+      {
+        "word": "驾",
+        "pinyin": "jià",
+        "words": ["驾驶", "驾车"],
+        "sentence": "驾车守规则。"
+      },
+      {
+        "word": "轰",
+        "pinyin": "hōng",
+        "words": ["轰炸", "轰鸣"],
+        "sentence": "轰鸣震耳聋。"
+      },
+      {
+        "word": "驳",
+        "pinyin": "bó",
+        "words": ["反驳", "驳回"],
+        "sentence": "驳回无理求。"
+      },
+      {
+        "word": "药",
+        "pinyin": "yào",
+        "words": ["草药", "中药"],
+        "sentence": "中药苦却灵。"
+      },
+      {
+        "word": "赞",
+        "pinyin": "zàn",
+        "words": ["赞美", "称赞"],
+        "sentence": "称赞暖人心。"
+      },
+      {
+        "word": "合",
+        "pinyin": "hé",
+        "words": ["合作", "合拢"],
+        "sentence": "合拢书本页。"
+      },
+      {
+        "word": "记",
+        "pinyin": "jì",
+        "words": ["记忆", "日记"],
+        "sentence": "日记天天写。"
+      },
+      {
+        "word": "屁",
+        "pinyin": "pì",
+        "words": ["放屁", "屁股"],
+        "sentence": "屁股扭一扭。"
+      },
+      {
+        "word": "股",
+        "pinyin": "gǔ",
+        "words": ["股票", "屁股"],
+        "sentence": "股票有风险。"
+      },
+      {
+        "word": "尿",
+        "pinyin": "niào",
+        "words": ["撒尿", "尿液"],
+        "sentence": "尿液要排放。"
+      },
+      {
+        "word": "净",
+        "pinyin": "jìng",
+        "words": ["干净", "纯净"],
+        "sentence": "纯净水甘甜。"
+      },
+      {
+        "word": "屎",
+        "pinyin": "shǐ",
+        "words": ["拉屎", "粪便"],
+        "sentence": "粪便要清理。"
+      },
+      {
+        "word": "幸",
+        "pinyin": "xìng",
+        "words": ["幸福", "幸运"],
+        "sentence": "幸运降临快。"
+      },
+      {
+        "word": "使",
+        "pinyin": "shǐ",
+        "words": ["使用", "天使"],
+        "sentence": "天使爱美丽。"
+      },
+      {
+        "word": "劲",
+        "pinyin": "jìn",
+        "words": ["使劲", "劲头"],
+        "sentence": "劲头十足足。"
+      },
+      {
+        "word": "亡",
+        "pinyin": "wáng",
+        "words": ["死亡", "逃亡"],
+        "sentence": "逃亡路上险。"
+      },
+      {
+        "word": "牢",
+        "pinyin": "láo",
+        "words": ["牢房", "坐牢"],
+        "sentence": "牢房铁窗寒。"
+      },
+      {
+        "word": "钻",
+        "pinyin": "zuān",
+        "words": ["钻洞", "钻研"],
+        "sentence": "钻研学问深。"
+      },
+      {
+        "word": "劝",
+        "pinyin": "quàn",
+        "words": ["劝说", "劝导"],
+        "sentence": "劝导要耐心。"
+      },
+      {
+        "word": "丢",
+        "pinyin": "diū",
+        "words": ["丢失", "丢脸"],
+        "sentence": "丢脸事莫做。"
+      },
+      {
+        "word": "告",
+        "pinyin": "gào",
+        "words": ["告诉", "报告"],
+        "sentence": "报告写完整。"
+      },
+      {
+        "word": "筋",
+        "pinyin": "jīn",
+        "words": ["筋骨", "钢筋"],
+        "sentence": "钢筋铁骨硬。"
+      },
+      {
+        "word": "疲",
+        "pinyin": "pí",
+        "words": ["疲劳", "疲倦"],
+        "sentence": "疲倦要休息。"
+      },
+      {
+        "word": "图",
+        "pinyin": "tú",
+        "words": ["地图", "图画"],
+        "sentence": "地图辨方向。"
+      },
+      {
+        "word": "课",
+        "pinyin": "kè",
+        "words": ["上课", "下课"],
+        "sentence": "下课铃声响。"
+      },
+      {
+        "word": "摆",
+        "pinyin": "bǎi",
+        "words": ["摆手", "摆放"],
+        "sentence": "摆放要整齐。"
+      },
+      {
+        "word": "座",
+        "pinyin": "zuò",
+        "words": ["座位", "星座"],
+        "sentence": "星座闪闪亮。"
+      },
+      {
+        "word": "交",
+        "pinyin": "jiāo",
+        "words": ["交通", "交叉"],
+        "sentence": "交叉路口忙。"
+      },
+      {
+        "word": "哈",
+        "pinyin": "hā",
+        "words": ["哈欠", "哈哈大笑"],
+        "sentence": "哈哈大笑开心。"
+      },
+      {
+        "word": "页",
+        "pinyin": "yè",
+        "words": ["页面", "页码"],
+        "sentence": "页码要记清。"
+      },
+      {
+        "word": "抢",
+        "pinyin": "qiǎng",
+        "words": ["抢手", "抢夺"],
+        "sentence": "抢夺犯法纪。"
+      },
+      {
+        "word": "嘻",
+        "pinyin": "xī",
+        "words": ["嘻笑", "嘻嘻哈哈"],
+        "sentence": "嘻嘻哈哈快乐。"
+      },
+      {
+        "word": "愿",
+        "pinyin": "yuàn",
+        "words": ["愿意", "愿望"],
+        "sentence": "愿望要实现。"
+      },
+      {
+        "word": "意",
+        "pinyin": "yì",
+        "words": ["意思", "满意"],
+        "sentence": "满意笑开颜。"
+      },
+      {
+        "word": "麦",
+        "pinyin": "mài",
+        "words": ["麦子", "麦田"],
+        "sentence": "麦田金浪翻。"
+      },
+      {
+        "word": "该",
+        "pinyin": "gāi",
+        "words": ["应该", "活该"],
+        "sentence": "活该受批评。"
+      },
+      {
+        "word": "伯",
+        "pinyin": "bó",
+        "words": ["伯父", "大伯"],
+        "sentence": "大伯讲故事。"
+      },
+      {
+        "word": "刻",
+        "pinyin": "kè",
+        "words": ["刻苦", "时刻"],
+        "sentence": "时刻准备着。"
+      },
+      {
+        "word": "突",
+        "pinyin": "tū",
+        "words": ["突然", "突破"],
+        "sentence": "突然袭击来。"
+      },
+      {
+        "word": "掉",
+        "pinyin": "diào",
+        "words": ["掉队", "掉泪"],
+        "sentence": "掉泪因感动。"
+      },
+      {
+        "word": "湖",
+        "pinyin": "hú",
+        "words": ["湖水", "西湖"],
+        "sentence": "西湖美景多。"
+      },
+      {
+        "word": "莲",
+        "pinyin": "lián",
+        "words": ["莲花", "莲蓬"],
+        "sentence": "莲蓬像花洒。"
+      },
+      {
+        "word": "穷",
+        "pinyin": "qióng",
+        "words": ["穷人", "贫穷"],
+        "sentence": "贫穷不丧志。"
+      },
+      {
+        "word": "荷",
+        "pinyin": "hé",
+        "words": ["荷花", "荷叶"],
+        "sentence": "荷叶像圆盘。"
+      },
+      {
+        "word": "绝",
+        "pinyin": "jué",
+        "words": ["绝对", "绝技"],
+        "sentence": "绝技令人惊。"
+      },
+      {
+        "word": "含",
+        "pinyin": "hán",
+        "words": ["含义", "含泪"],
+        "sentence": "含泪送友人。"
+      },
+      {
+        "word": "岭",
+        "pinyin": "lǐng",
+        "words": ["山岭", "岭南"],
+        "sentence": "岭南荔枝甜。"
+      },
+      {
+        "word": "吴",
+        "pinyin": "wú",
+        "words": ["吴国", "吴音"],
+        "sentence": "吴音软绵绵。"
+      },
+      {
+        "word": "雷",
+        "pinyin": "léi",
+        "words": ["雷雨", "雷声"],
+        "sentence": "雷声轰隆隆。"
+      },
+      {
+        "word": "乌",
+        "pinyin": "wū",
+        "words": ["乌鸦", "乌黑"],
+        "sentence": "乌黑头发亮。"
+      },
+      {
+        "word": "黑",
+        "pinyin": "hēi",
+        "words": ["黑色", "黑板"],
+        "sentence": "黑板写大字。"
+      },
+      {
+        "word": "压",
+        "pinyin": "yā",
+        "words": ["压力", "镇压"],
+        "sentence": "压力变动力。"
+      },
+      {
+        "word": "垂",
+        "pinyin": "chuí",
+        "words": ["垂下", "垂直"],
+        "sentence": "垂直线很直。"
+      },
+      {
+        "word": "户",
+        "pinyin": "hù",
+        "words": ["窗户", "门户"],
+        "sentence": "门户要关好。"
+      },
+      {
+        "word": "迎",
+        "pinyin": "yíng",
+        "words": ["迎接", "欢迎"],
+        "sentence": "欢迎新同学。"
+      },
+      {
+        "word": "扑",
+        "pinyin": "pū",
+        "words": ["扑打", "扑灭"],
+        "sentence": "扑灭大火苗。"
+      },
+      {
+        "word": "指",
+        "pinyin": "zhǐ",
+        "words": ["手指", "指导"],
+        "sentence": "指导要耐心。"
+      },
+      {
+        "word": "针",
+        "pinyin": "zhēn",
+        "words": ["针对", "打针"],
+        "sentence": "打针不怕疼。"
+      },
+      {
+        "word": "帮",
+        "pinyin": "bāng",
+        "words": ["帮助", "帮忙"],
+        "sentence": "帮忙是美德。"
+      },
+      {
+        "word": "助",
+        "pinyin": "zhù",
+        "words": ["帮助", "助手"],
+        "sentence": "助手来协助。"
+      },
+      {
+        "word": "导",
+        "pinyin": "dǎo",
+        "words": ["指导", "领导"],
+        "sentence": "领导走在前。"
+      },
+      {
+        "word": "永",
+        "pinyin": "yǒng",
+        "words": ["永远", "永久"],
+        "sentence": "永久不变心。"
+      },
+      {
+        "word": "碰",
+        "pinyin": "pèng",
+        "words": ["碰见", "碰撞"],
+        "sentence": "碰撞出火花。"
+      },
+      {
+        "word": "特",
+        "pinyin": "tè",
+        "words": ["特别", "特殊"],
+        "sentence": "特殊情况下。"
+      },
+      {
+        "word": "积",
+        "pinyin": "jī",
+        "words": ["积极", "积累"],
+        "sentence": "积累知识多。"
+      },
+      {
+        "word": "航",
+        "pinyin": "háng",
+        "words": ["航行", "航空"],
+        "sentence": "航空事业旺。"
+      },
+      {
+        "word": "宇",
+        "pinyin": "yǔ",
+        "words": ["宇宙", "宇航"],
+        "sentence": "宇宙奥秘多。"
+      },
+      {
+        "word": "宙",
+        "pinyin": "zhòu",
+        "words": ["宇宙", "宙斯"],
+        "sentence": "宙斯是神话。"
+      },
+      {
+        "word": "稳",
+        "pinyin": "wěn",
+        "words": ["稳定", "稳重"],
+        "sentence": "稳重做事好。"
+      },
+      {
+        "word": "杯",
+        "pinyin": "bēi",
+        "words": ["水杯", "奖杯"],
+        "sentence": "奖杯闪金光。"
+      },
+      {
+        "word": "失",
+        "pinyin": "shī",
+        "words": ["失去", "丢失"],
+        "sentence": "丢失要找回。"
+      },
+      {
+        "word": "板",
+        "pinyin": "bǎn",
+        "words": ["黑板", "木板"],
+        "sentence": "木板钉钉子。"
+      },
+      {
+        "word": "容",
+        "pinyin": "róng",
+        "words": ["容易", "笑容"],
+        "sentence": "笑容满面喜。"
+      },
+      {
+        "word": "易",
+        "pinyin": "yì",
+        "words": ["容易", "交易"],
+        "sentence": "交易要公平。"
+      },
+      {
+        "word": "浴",
+        "pinyin": "yù",
+        "words": ["洗澡", "浴室"],
+        "sentence": "浴室香喷喷。"
+      },
+      {
+        "word": "室",
+        "pinyin": "shì",
+        "words": ["教室", "卧室"],
+        "sentence": "卧室要整洁。"
+      },
+      {
+        "word": "扇",
+        "pinyin": "shàn",
+        "words": ["扇子", "电扇"],
+        "sentence": "电扇送清凉。"
+      },
+      {
+        "word": "慢",
+        "pinyin": "màn",
+        "words": ["缓慢", "慢慢"],
+        "sentence": "慢慢走安全。"
+      },
+      {
+        "word": "遇",
+        "pinyin": "yù",
+        "words": ["遇见", "遇到"],
+        "sentence": "遇到好机会。"
+      },
+      {
+        "word": "兔",
+        "pinyin": "tù",
+        "words": ["兔子", "白兔"],
+        "sentence": "白兔蹦蹦跳。"
+      },
+      {
+        "word": "安",
+        "pinyin": "ān",
+        "words": ["安全", "平安"],
+        "sentence": "平安就是福。"
+      },
+      {
+        "word": "根",
+        "pinyin": "gēn",
+        "words": ["根本", "树根"],
+        "sentence": "树根扎泥土。"
+      },
+      {
+        "word": "痛",
+        "pinyin": "tòng",
+        "words": ["痛苦", "疼痛"],
+        "sentence": "疼痛要就医。"
+      },
+      {
+        "word": "最",
+        "pinyin": "zuì",
+        "words": ["最好", "最美"],
+        "sentence": "最美是心灵。"
+      },
+      {
+        "word": "店",
+        "pinyin": "diàn",
+        "words": ["商店", "书店"],
+        "sentence": "书店买新书。"
+      },
+      {
+        "word": "决",
+        "pinyin": "jué",
+        "words": ["决定", "决心"],
+        "sentence": "决心不动摇。"
+      },
+      {
+        "word": "定",
+        "pinyin": "dìng",
+        "words": ["决定", "稳定"],
+        "sentence": "稳定是前提。"
+      },
+      {
+        "word": "夫",
+        "pinyin": "fū",
+        "words": ["农夫", "大夫"],
+        "sentence": "农夫种庄稼。"
+      },
+      {
+        "word": "终",
+        "pinyin": "zhōng",
+        "words": ["终于", "终点"],
+        "sentence": "终点冲刺快。"
+      },
+      {
+        "word": "完",
+        "pinyin": "wán",
+        "words": ["完成", "完美"],
+        "sentence": "完美是追求。"
+      },
+      {
+        "word": "换",
+        "pinyin": "huàn",
+        "words": ["交换", "更换"],
+        "sentence": "更换旧零件。"
+      },
+      {
+        "word": "期",
+        "pinyin": "qī",
+        "words": ["日期", "学期"],
+        "sentence": "学期快结束。"
+      },
+      {
+        "word": "蛙",
+        "pinyin": "wā",
+        "words": ["青蛙", "牛蛙"],
+        "sentence": "牛蛙叫声大。"
+      },
+      {
+        "word": "卖",
+        "pinyin": "mài",
+        "words": ["买卖", "卖菜"],
+        "sentence": "卖菜要新鲜。"
+      },
+      {
+        "word": "搬",
+        "pinyin": "bān",
+        "words": ["搬家", "搬运"],
+        "sentence": "搬运重物品。"
+      },
+      {
+        "word": "倒",
+        "pinyin": "dǎo",
+        "words": ["倒车", "倒下"],
+        "sentence": "倒下快爬起。"
+      },
+      {
+        "word": "籽",
+        "pinyin": "zǐ",
+        "words": ["菜籽", "花籽"],
+        "sentence": "花籽播土壤。"
+      },
+      {
+        "word": "泉",
+        "pinyin": "quán",
+        "words": ["泉水", "清泉"],
+        "sentence": "清泉石上流。"
+      },
+      {
+        "word": "破",
+        "pinyin": "pò",
+        "words": ["破坏", "打破"],
+        "sentence": "打破旧纪录。"
+      },
+      {
+        "word": "应",
+        "pinyin": "yìng",
+        "words": ["答应", "反应"],
+        "sentence": "反应要迅速。"
+      },
+      {
+        "word": "整",
+        "pinyin": "zhěng",
+        "words": ["整齐", "完整"],
+        "sentence": "完整无缺损。"
+      },
+      {
+        "word": "抽",
+        "pinyin": "chōu",
+        "words": ["抽奖", "抽出"],
+        "sentence": "抽出幸运签。"
+      },
+      {
+        "word": "纺",
+        "pinyin": "fǎng",
+        "words": ["纺织", "纺纱"],
+        "sentence": "纺纱织成布。"
+      },
+      {
+        "word": "织",
+        "pinyin": "zhī",
+        "words": ["纺织", "编织"],
+        "sentence": "编织五彩梦。"
+      },
+      {
+        "word": "编",
+        "pinyin": "biān",
+        "words": ["编辑", "编写"],
+        "sentence": "编写新故事。"
+      },
+      {
+        "word": "怎",
+        "pinyin": "zěn",
+        "words": ["怎样", "怎么"],
+        "sentence": "怎么办才好？"
+      },
+      {
+        "word": "布",
+        "pinyin": "bù",
+        "words": ["棉布", "布置"],
+        "sentence": "布置新房间。"
+      },
+      {
+        "word": "消",
+        "pinyin": "xiāo",
+        "words": ["消失", "消灭"],
+        "sentence": "消灭病虫害。"
+      },
+      {
+        "word": "祖",
+        "pinyin": "zǔ",
+        "words": ["祖国", "祖先"],
+        "sentence": "祖先留遗产。"
+      },
+      {
+        "word": "啊",
+        "pinyin": "ā",
+        "words": ["好啊", "啊呀"],
+        "sentence": "啊呀真惊喜！"
+      },
+      {
+        "word": "浓",
+        "pinyin": "nóng",
+        "words": ["浓厚", "浓眉"],
+        "sentence": "浓眉大眼亮。"
+      },
+      {
+        "word": "望",
+        "pinyin": "wàng",
+        "words": ["希望", "张望"],
+        "sentence": "张望找熟人。"
+      },
+      {
+        "word": "蓝",
+        "pinyin": "lán",
+        "words": ["蓝天", "蓝色"],
+        "sentence": "蓝色像大海。"
+      },
+      {
+        "word": "摘",
+        "pinyin": "zhāi",
+        "words": ["采摘", "摘下"],
+        "sentence": "摘下大苹果。"
+      },
+      {
+        "word": "掏",
+        "pinyin": "tāo",
+        "words": ["掏出", "掏鸟蛋"],
+        "sentence": "掏鸟蛋有趣。"
+      },
+      {
+        "word": "赛",
+        "pinyin": "sài",
+        "words": ["比赛", "竞赛"],
+        "sentence": "竞赛夺冠军。"
+      },
+      {
+        "word": "忆",
+        "pinyin": "yì",
+        "words": ["回忆", "记忆"],
+        "sentence": "记忆永不忘。"
+      },
+      {
+        "word": "世",
+        "pinyin": "shì",
+        "words": ["世界", "世代"],
+        "sentence": "世代传美名。"
+      },
+      {
+        "word": "界",
+        "pinyin": "jiè",
+        "words": ["世界", "边界"],
+        "sentence": "边界要守卫。"
+      },
+      {
+        "word": "功",
+        "pinyin": "gōng",
+        "words": ["成功", "功课"],
+        "sentence": "功课要完成。"
+      },
+      {
+        "word": "反",
+        "pinyin": "fǎn",
+        "words": ["反复", "反面"],
+        "sentence": "反面有真相。"
+      },
+      {
+        "word": "复",
+        "pinyin": "fù",
+        "words": ["复习", "重复"],
+        "sentence": "重复练习好。"
+      },
+      {
+        "word": "式",
+        "pinyin": "shì",
+        "words": ["方式", "格式"],
+        "sentence": "格式要规范。"
+      },
+      {
+        "word": "简",
+        "pinyin": "jiǎn",
+        "words": ["简单", "简便"],
+        "sentence": "简单方法好。"
+      },
+      {
+        "word": "弄",
+        "pinyin": "nòng",
+        "words": ["弄好", "玩弄"],
+        "sentence": "弄好再休息。"
+      },
+      {
+        "word": "由",
+        "pinyin": "yóu",
+        "words": ["由于", "自由"],
+        "sentence": "自由多美好。"
+      },
+      {
+        "word": "睁",
+        "pinyin": "zhēng",
+        "words": ["睁眼", "睁开"],
+        "sentence": "睁开大眼睛。"
+      },
+      {
+        "word": "秩",
+        "pinyin": "zhì",
+        "words": ["秩序", "秩秩"],
+        "sentence": "秩序要遵守。"
+      },
+      {
+        "word": "序",
+        "pinyin": "xù",
+        "words": ["顺序", "秩序"],
+        "sentence": "顺序不能乱。"
+      },
+      {
+        "word": "哦",
+        "pinyin": "ò",
+        "words": ["哦，明白了！"],
+        "sentence": "哦，原来如此！"
+      },
+      {
+        "word": "射",
+        "pinyin": "shè",
+        "words": ["射击", "发射"],
+        "sentence": "发射火箭快。"
+      },
+      {
+        "word": "值",
+        "pinyin": "zhí",
+        "words": ["值得", "价值"],
+        "sentence": "价值要珍惜。"
+      },
+      {
+        "word": "熔",
+        "pinyin": "róng",
+        "words": ["熔化", "熔炉"],
+        "sentence": "熔炉炼好钢。"
+      },
+      {
+        "word": "艰",
+        "pinyin": "jiān",
+        "words": ["艰苦", "艰难"],
+        "sentence": "艰难不低头。"
+      },
+      {
+        "word": "箭",
+        "pinyin": "jiàn",
+        "words": ["弓箭", "火箭"],
+        "sentence": "火箭飞上天。"
+      },
+      {
+        "word": "裂",
+        "pinyin": "liè",
+        "words": ["破裂", "分裂"],
+        "sentence": "分裂要不得。"
+      },
+      {
+        "word": "窜",
+        "pinyin": "cuàn",
+        "words": ["逃窜", "窜改"],
+        "sentence": "窜改是错误。"
+      },
+      {
+        "word": "炎",
+        "pinyin": "yán",
+        "words": ["炎热", "发炎"],
+        "sentence": "发炎要消炎。"
+      },
+      {
+        "word": "庄",
+        "pinyin": "zhuāng",
+        "words": ["庄严", "村庄"],
+        "sentence": "村庄炊烟起。"
+      },
+      {
+        "word": "稼",
+        "pinyin": "jià",
+        "words": ["庄稼", "稼穑"],
+        "sentence": "稼穑靠勤劳。"
+      },
+      {
+        "word": "滋",
+        "pinyin": "zī",
+        "words": ["滋味", "滋养"],
+        "sentence": "滋养身体棒。"
+      },
+      {
+        "word": "腾",
+        "pinyin": "téng",
+        "words": ["奔腾", "飞腾"],
+        "sentence": "飞腾跃龙门。"
+      },
+      {
+        "word": "钩",
+        "pinyin": "gōu",
+        "words": ["鱼钩", "挂钩"],
+        "sentence": "挂钩挂书包。"
+      },
+      {
+        "word": "铲",
+        "pinyin": "chǎn",
+        "words": ["铁铲", "铲除"],
+        "sentence": "铲除旧思想。"
+      },
+      {
+        "word": "梅",
+        "pinyin": "méi",
+        "words": ["梅花", "杨梅"],
+        "sentence": "杨梅酸又甜。"
+      },
+      {
+        "word": "柿",
+        "pinyin": "shì",
+        "words": ["柿子", "柿饼"],
+        "sentence": "柿饼甜又软。"
+      },
+      {
+        "word": "源",
+        "pinyin": "yuán",
+        "words": ["水源", "来源"],
+        "sentence": "来源要查清。"
+      },
+      {
+        "word": "涨",
+        "pinyin": "zhǎng",
+        "words": ["涨水", "涨价"],
+        "sentence": "涨价要适度。"
+      },
+      {
+        "word": "炬",
+        "pinyin": "jù",
+        "words": ["火炬", "火炬"],
+        "sentence": "火炬传激情。"
+      },
+      {
+        "word": "灿",
+        "pinyin": "càn",
+        "words": ["灿烂", "灿亮"],
+        "sentence": "灿亮如星光。"
+      },
+      {
+        "word": "垮",
+        "pinyin": "kuǎ",
+        "words": ["垮塌", "打垮"],
+        "sentence": "打垮敌人士气。"
+      },
+      {
+        "word": "坟",
+        "pinyin": "fén",
+        "words": ["坟墓", "祖坟"],
+        "sentence": "祖坟要祭扫。"
+      },
+      {
+        "word": "扫",
+        "pinyin": "sào",
+        "words": ["扫帚", "扫地"],
+        "sentence": "扫地要干净。"
+      },
+      {
+        "word": "帚",
+        "pinyin": "zhǒu",
+        "words": ["扫帚", "敝帚"],
+        "sentence": "敝帚自珍惜。"
+      },
+      {
+        "word": "抹",
+        "pinyin": "mā",
+        "words": ["抹布", "抹桌"],
+        "sentence": "抹桌擦灰尘。"
+      },
+      {
+        "word": "拖",
+        "pinyin": "tuō",
+        "words": ["拖拉", "拖延"],
+        "sentence": "拖延误大事。"
+      },
+      {
+        "word": "桶",
+        "pinyin": "tǒng",
+        "words": ["水桶", "铁桶"],
+        "sentence": "铁桶装清水。"
+      },
+      {
+        "word": "簸",
+        "pinyin": "bò",
+        "words": ["簸箕", "颠簸"],
+        "sentence": "颠簸路难行。"
+      },
+      {
+        "word": "箕",
+        "pinyin": "jī",
+        "words": ["簸箕", "箕斗"],
+        "sentence": "箕斗量粮食。"
+      },
+      {
+        "word": "玻",
+        "pinyin": "bō",
+        "words": ["玻璃", "玻璃"],
+        "sentence": "玻璃擦明亮。"
+      },
+      {
+        "word": "璃",
+        "pinyin": "lí",
+        "words": ["玻璃", "琉璃"],
+        "sentence": "琉璃瓦闪光。"
+      },
+      {
+        "word": "垃",
+        "pinyin": "lā",
+        "words": ["垃圾", "垃桶"],
+        "sentence": "垃桶装垃圾。"
+      },
+      {
+        "word": "圾",
+        "pinyin": "jī",
+        "words": ["垃圾", "圾桶"],
+        "sentence": "圾桶及时清。"
+      },
+      {
+        "word": "博",
+        "pinyin": "bó",
+        "words": ["博士", "广博"],
+        "sentence": "广博知识多。"
+      },
+      {
+        "word": "馆",
+        "pinyin": "guǎn",
+        "words": ["宾馆", "饭馆"],
+        "sentence": "饭馆饭菜香。"
+      },
+      {
+        "word": "览",
+        "pinyin": "lǎn",
+        "words": ["展览", "游览"],
+        "sentence": "游览名胜地。"
+      },
+      {
+        "word": "育",
+        "pinyin": "yù",
+        "words": ["教育", "体育"],
+        "sentence": "体育强身体。"
+      },
+      {
+        "word": "研",
+        "pinyin": "yán",
+        "words": ["研究", "科研"],
+        "sentence": "科研出成果。"
+      },
+      {
+        "word": "究",
+        "pinyin": "jiū",
+        "words": ["研究", "追究"],
+        "sentence": "追究责任明。"
+      },
+      {
+        "word": "哨",
+        "pinyin": "shào",
+        "words": ["口哨", "哨兵"],
+        "sentence": "哨兵站岗忙。"
+      },
+      {
+        "word": "诊",
+        "pinyin": "zhěn",
+        "words": ["诊断", "门诊"],
+        "sentence": "门诊看病人。"
       }
+    ]
+  },
+   {
+    "grade": "三年级上册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "三年级下册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "四年级上册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "四年级下册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "五年级上册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "五年级下册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "六年级上册",
+    "characters": [
+      
+    ]
+  },
+   {
+    "grade": "六年级下册",
+    "characters": [
+      
     ]
   }
 ]
