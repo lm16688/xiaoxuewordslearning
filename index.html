@@ -1,24 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>Test Study.js</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试 study.js</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #character { font-size: 100px; }
+        .controls { margin: 20px 0; }
+        button { margin: 5px; padding: 10px 20px; }
+    </style>
 </head>
 <body>
-    <h1>Testing study.js</h1>
+    <h1 id="grade-title">年级生字学习</h1>
     
+    <div style="text-align: center; margin: 40px;">
+        <div id="character">字</div>
+        <div id="pinyin">pinyin</div>
+        <div id="word-groups"></div>
+        <div id="sentence">例句...</div>
+    </div>
+    
+    <div class="controls">
+        <button id="speak-btn">朗读</button>
+        <button id="prev-btn">上一个</button>
+        <button id="next-btn">下一个</button>
+        <button id="review-btn">标记复习</button>
+        <button id="mastered-btn">标记掌握</button>
+    </div>
+    
+    <div style="margin: 20px 0;">
+        <div>提示：<span id="hint-text"></span></div>
+    </div>
+    
+    <!-- 统计信息 -->
+    <div>
+        总计：<span id="total-count">0</span> |
+        已学：<span id="learned-count">0</span> |
+        复习：<span id="review-count">0</span> |
+        掌握：<span id="mastered-count">0</span>
+    </div>
+    
+    <!-- 进度条 -->
+    <div style="width: 300px; height: 20px; border: 1px solid #ccc; margin: 20px 0;">
+        <div id="progress-fill" style="height: 100%; width: 50%; background: #4CAF50;"></div>
+    </div>
+    <div id="progress-text">0/0</div>
+    
+    <!-- 必须放在body末尾 -->
     <script src="study.js"></script>
     
+    <!-- 或者用这个调试 -->
     <script>
-        // 测试study.js是否加载
-        setTimeout(function() {
-            if (typeof testStudyJS === 'function') {
-                console.log("✓ study.js加载成功");
-                testStudyJS();
-            } else {
-                console.error("✗ study.js未加载");
-                alert("study.js未加载");
+        // 检查是否加载成功
+        window.addEventListener('load', function() {
+            console.log('页面已加载完成');
+            if (typeof charactersData !== 'undefined') {
+                console.log('✅ study.js 变量已定义');
             }
-        }, 1000);
+        });
     </script>
 </body>
 </html>
