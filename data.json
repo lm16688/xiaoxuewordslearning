@@ -31,6 +31,60 @@
         "pinyin": "xià",
         "words": ["下面", "下课", "下雨"],
         "sentence": "小狗在桌子下面。"
+      },
+      {
+        "word": "耳",
+        "pinyin": "ěr",
+        "words": ["耳朵", "耳机"],
+        "sentence": "小兔子耳朵长。"
+      },
+      {
+        "word": "目",
+        "pinyin": "mù",
+        "words": ["目光", "耳目"],
+        "sentence": "目光要放远。"
+      },
+      {
+        "word": "手",
+        "pinyin": "shǒu",
+        "words": ["小手", "手机"],
+        "sentence": "小手洗干净。"
+      },
+      {
+        "word": "足",
+        "pinyin": "zú",
+        "words": ["手足", "足球"],
+        "sentence": "足球圆又圆。"
+      },
+      {
+        "word": "日",
+        "pinyin": "rì",
+        "words": ["红日", "节日"],
+        "sentence": "红日当空照。"
+      },
+      {
+        "word": "月",
+        "pinyin": "yuè",
+        "words": ["月亮", "明月"],
+        "sentence": "月亮像小船。"
+      },
+      {
+        "word": "水",
+        "pinyin": "shuǐ",
+        "words": ["河水", "水果"],
+        "sentence": "水果甜又甜。"
+      },
+      {
+        "word": "火",
+        "pinyin": "huǒ",
+        "words": ["大火", "火车"],
+        "sentence": "火车呜呜叫。"
+      },
+      {
+        "word": "山",
+        "pinyin": "shān",
+        "words": ["高山", "山水"],
+        "sentence": "高山绿油油。"
       }
     ]
   },
