@@ -5217,7 +5217,355 @@
         "pinyin": "bù",
         "words": ["步伐", "脚步"],
         "sentence": "脚步更加稳健。"
-      }
+      },
+      {
+        "word": "雾",
+        "pinyin": "wù",
+        "words": ["大雾", "雾气"],
+        "sentence": "山谷里雾气腾腾。"
+      },
+      {
+        "word": "朝",
+        "pinyin": "cháo",
+        "words": ["朝代", "朝着"],
+        "sentence": "朝着目标前进。"
+      },
+      {
+        "word": "霞",
+        "pinyin": "xiá",
+        "words": ["朝霞", "晚霞"],
+        "sentence": "晚霞映红天空。"
+      },
+      {
+        "word": "霜",
+        "pinyin": "shuāng",
+        "words": ["秋霜", "霜降"],
+        "sentence": "秋霜染红叶。"
+      },
+      {
+        "word": "降",
+        "pinyin": "jiàng",
+        "words": ["降落", "下降"],
+        "sentence": "飞机缓缓降落。"
+      },
+      {
+        "word": "凌",
+        "pinyin": "líng",
+        "words": ["凌空", "凌乱"],
+        "sentence": "风筝凌空飞舞。"
+      },
+      {
+        "word": "零",
+        "pinyin": "líng",
+        "words": ["零分", "零件"],
+        "sentence": "零件缺一不可。"
+      },
+      {
+        "word": "偏",
+        "pinyin": "piān",
+        "words": ["偏僻", "偏心"],
+        "sentence": "偏僻山村通路了。"
+      },
+      {
+        "word": "僻",
+        "pinyin": "pì",
+        "words": ["僻静", "怪僻"],
+        "sentence": "僻静的小路。"
+      },
+      {
+        "word": "幅",
+        "pinyin": "fú",
+        "words": ["一幅", "幅度"],
+        "sentence": "墙上挂着一幅画。"
+      },
+      {
+        "word": "画",
+        "pinyin": "huà",
+        "words": ["图画", "画家"],
+        "sentence": "画家描绘家乡美。"
+      },
+      {
+        "word": "卷",
+        "pinyin": "juàn",
+        "words": ["画卷", "试卷"],
+        "sentence": "展开美丽的画卷。"
+      },
+      {
+        "word": "轴",
+        "pinyin": "zhóu",
+        "words": ["画轴", "轴承"],
+        "sentence": "画轴慢慢拉开。"
+      },
+      {
+        "word": "墨",
+        "pinyin": "mò",
+        "words": ["墨水", "墨绿"],
+        "sentence": "墨水瓶打翻了。"
+      },
+      {
+        "word": "笔",
+        "pinyin": "bǐ",
+        "words": ["毛笔", "笔画"],
+        "sentence": "毛笔字写得很棒。"
+      },
+      {
+        "word": "砚",
+        "pinyin": "yàn",
+        "words": ["砚台", "端砚"],
+        "sentence": "砚台里的墨汁浓浓的。"
+      },
+      {
+        "word": "纸",
+        "pinyin": "zhǐ",
+        "words": ["白纸", "报纸"],
+        "sentence": "白纸可以画画。"
+      },
+      {
+        "word": "宣",
+        "pinyin": "xuān",
+        "words": ["宣纸", "宣布"],
+        "sentence": "宣纸适合写毛笔字。"
+      },
+      {
+        "word": "染",
+        "pinyin": "rǎn",
+        "words": ["染色", "染布"],
+        "sentence": "染布需要耐心。"
+      },
+      {
+        "word": "色",
+        "pinyin": "sè",
+        "words": ["颜色", "色彩"],
+        "sentence": "颜色搭配要协调。"
+      },
+      {
+        "word": "彩",
+        "pinyin": "cǎi",
+        "words": ["彩色", "彩虹"],
+        "sentence": "雨后出现美丽的彩虹。"
+      },
+      {
+        "word": "颜",
+        "pinyin": "yán",
+        "words": ["颜色", "颜面"],
+        "sentence": "颜色真鲜艳。"
+      },
+      {
+        "word": "料",
+        "pinyin": "liào",
+        "words": ["颜料", "资料"],
+        "sentence": "颜料混合变新色。"
+      },
+      {
+        "word": "油",
+        "pinyin": "yóu",
+        "words": ["油画", "汽油"],
+        "sentence": "油画色彩厚重。"
+      },
+      {
+        "word": "漆",
+        "pinyin": "qī",
+        "words": ["油漆", "漆黑"],
+        "sentence": "大门重新刷了油漆。"
+      },
+      {
+        "word": "抹",
+        "pinyin": "mǒ",
+        "words": ["涂抹", "抹黑"],
+        "sentence": "涂抹要均匀。"
+      },
+      {
+        "word": "涂",
+        "pinyin": "tú",
+        "words": ["涂色", "涂鸦"],
+        "sentence": "别在墙上乱涂。"
+      },
+      {
+        "word": "描",
+        "pinyin": "miáo",
+        "words": ["描写", "描绘"],
+        "sentence": "描写要具体生动。"
+      },
+      {
+        "word": "绘",
+        "pinyin": "huì",
+        "words": ["绘画", "描绘"],
+        "sentence": "他正在绘画风景。"
+      },
+      {
+        "word": "勾",
+        "pinyin": "gōu",
+        "words": ["勾线", "勾结"],
+        "sentence": "用细笔勾线。"
+      },
+      {
+        "word": "勒",
+        "pinyin": "lè",
+        "words": ["勾勒", "勒马"],
+        "sentence": "勾勒轮廓要准确。"
+      },
+      {
+        "word": "线",
+        "pinyin": "xiàn",
+        "words": ["线条", "直线"],
+        "sentence": "线条要流畅。"
+      },
+      {
+        "word": "条",
+        "pinyin": "tiáo",
+        "words": ["条件", "线条"],
+        "sentence": "这条线画得很直。"
+      },
+      {
+        "word": "浓",
+        "pinyin": "nóng",
+        "words": ["浓度", "浓眉"],
+        "sentence": "浓墨涂底色。"
+      },
+      {
+        "word": "淡",
+        "pinyin": "dàn",
+        "words": ["淡水", "清淡"],
+        "sentence": "淡墨晕染远山。"
+      },
+      {
+        "word": "干",
+        "pinyin": "gān",
+        "words": ["干燥", "干净"],
+        "sentence": "画面要干净。"
+      },
+      {
+        "word": "湿",
+        "pinyin": "shī",
+        "words": ["湿润", "潮湿"],
+        "sentence": "湿润颜色易渗透。"
+      },
+      {
+        "word": "晕",
+        "pinyin": "yūn",
+        "words": ["晕染", "头晕"],
+        "sentence": "晕染过渡自然。"
+      },
+      {
+        "word": "层",
+        "pinyin": "céng",
+        "words": ["层次", "楼层"],
+        "sentence": "层次分明效果好。"
+      },
+      {
+        "word": "次",
+        "pinyin": "cì",
+        "words": ["次数", "名次"],
+        "sentence": "练习次数要多。"
+      },
+      {
+        "word": "叠",
+        "pinyin": "dié",
+        "words": ["重叠", "折叠"],
+        "sentence": "远山层层叠叠。"
+      },
+      {
+        "word": "重",
+        "pinyin": "chóng",
+        "words": ["重复", "重新"],
+        "sentence": "重新修改画面。"
+      },
+      {
+        "word": "复",
+        "pinyin": "fù",
+        "words": ["复习", "复杂"],
+        "sentence": "构图不要太复杂。"
+      },
+      {
+        "word": "杂",
+        "pinyin": "zá",
+        "words": ["复杂", "杂乱"],
+        "sentence": "杂乱线条要整理。"
+      },
+      {
+        "word": "理",
+        "pinyin": "lǐ",
+        "words": ["整理", "道理"],
+        "sentence": "整理绘画工具。"
+      },
+      {
+        "word": "整",
+        "pinyin": "zhěng",
+        "words": ["整齐", "完整"],
+        "sentence": "完整作品才美观。"
+      },
+      {
+        "word": "齐",
+        "pinyin": "qí",
+        "words": ["整齐", "对齐"],
+        "sentence": "对齐画面边缘。"
+      },
+      {
+        "word": "洁",
+        "pinyin": "jié",
+        "words": ["整洁", "清洁"],
+        "sentence": "保持画面整洁。"
+      },
+      {
+        "word": "净",
+        "pinyin": "jìng",
+        "words": ["干净", "纯净"],
+        "sentence": "纯净颜色最漂亮。"
+      },
+      {
+        "word": "纯",
+        "pinyin": "chún",
+        "words": ["纯洁", "单纯"],
+        "sentence": "单纯色调也美。"
+      },
+      {
+        "word": "正",
+        "pinyin": "zhèng",
+        "words": ["端正", "正确"],
+        "sentence": "坐姿要端正。"
+      },
+      {
+        "word": "确",
+        "pinyin": "què",
+        "words": ["确定", "准确"],
+        "sentence": "准确勾勒形状。"
+      },
+      {
+        "word": "准",
+        "pinyin": "zhǔn",
+        "words": ["准备", "标准"],
+        "sentence": "准备绘画工具。"
+      },
+      {
+        "word": "标",
+        "pinyin": "biāo",
+        "words": ["目标", "标签"],
+        "sentence": "目标要明确。"
+      },
+      {
+        "word": "参",
+        "pinyin": "cān",
+        "words": ["参加", "参考"],
+        "sentence": "参加绘画比赛。"
+      },
+      {
+        "word": "赛",
+        "pinyin": "sài",
+        "words": ["比赛", "赛车"],
+        "sentence": "比赛获得第一名。"
+      },
+      {
+        "word": "评",
+        "pinyin": "píng",
+        "words": ["评比", "评价"],
+        "sentence": "评价作品优缺点。"
+      },
+      {
+        "word": "奖",
+        "pinyin": "jiǎng",
+        "words": ["奖励", "奖状"],
+        "sentence": "颁发奖状给优秀者。"
+      }     
     ]
   },
    {
