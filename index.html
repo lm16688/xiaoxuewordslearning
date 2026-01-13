@@ -3,62 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试 study.js</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        #character { font-size: 100px; }
-        .controls { margin: 20px 0; }
-        button { margin: 5px; padding: 10px 20px; }
-    </style>
+    <title>小学语文生字学习</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="grade-title">年级生字学习</h1>
-    
-    <div style="text-align: center; margin: 40px;">
-        <div id="character">字</div>
-        <div id="pinyin">pinyin</div>
-        <div id="word-groups"></div>
-        <div id="sentence">例句...</div>
+    <div class="container">
+        <header class="header">
+            <div class="social-qr">
+                <h1>关注女侠，解锁更多陪娃技巧！</h1>
+                <div class="qr-codes">
+                    <div class="qr-item">
+                        <img src="wechat.jpg" alt="微信公众号">
+                        <p>微信公众号</p>
+                    </div>
+                    <div class="qr-item">
+                        <img src="xiaohongshu.jpg" alt="小红书">
+                        <p>小红书</p>
+                    </div>
+                    <div class="qr-item">
+                        <img src="douyin.jpg" alt="抖音">
+                        <p>抖音</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>小学语文生字学习系统</h2>
+                <p class="subtitle">采用艾宾浩斯记忆法，科学记忆生字词</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <h3>科学记忆</h3>
+                        <p>基于艾宾浩斯遗忘曲线，优化复习间隔</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-volume-up"></i>
+                        <h3>语音朗读</h3>
+                        <p>标准普通话发音，帮助正确学习</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-book-open"></i>
+                        <h3>分级学习</h3>
+                        <p>按年级和上下册分类，循序渐进</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grade-selection">
+                <h2>请选择年级</h2>
+                <div class="grade-buttons">
+                    <div class="grade-group">
+                        <h3>一年级</h3>
+                        <button class="grade-btn" onclick="selectGrade('一年级上册')">一年级上册</button>
+                        <button class="grade-btn" onclick="selectGrade('一年级下册')">一年级下册</button>
+                    </div>
+                    <div class="grade-group">
+                        <h3>二年级</h3>
+                        <button class="grade-btn" onclick="selectGrade('二年级上册')">二年级上册</button>
+                        <button class="grade-btn" onclick="selectGrade('二年级下册')">二年级下册</button>
+                    </div>
+                    <div class="grade-group">
+                        <h3>三年级</h3>
+                        <button class="grade-btn" onclick="selectGrade('三年级上册')">三年级上册</button>
+                        <button class="grade-btn" onclick="selectGrade('三年级下册')">三年级下册</button>
+                    </div>
+                    <div class="grade-group">
+                        <h3>四年级</h3>
+                        <button class="grade-btn" onclick="selectGrade('四年级上册')">四年级上册</button>
+                        <button class="grade-btn" onclick="selectGrade('四年级下册')">四年级下册</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2023 小学语文生字学习系统 | 采用艾宾浩斯记忆法</p>
+            <p class="hint">提示：学习前请确保已连接网络，以便使用语音朗读功能</p>
+        </footer>
     </div>
     
-    <div class="controls">
-        <button id="speak-btn">朗读</button>
-        <button id="prev-btn">上一个</button>
-        <button id="next-btn">下一个</button>
-        <button id="review-btn">标记复习</button>
-        <button id="mastered-btn">标记掌握</button>
-    </div>
-    
-    <div style="margin: 20px 0;">
-        <div>提示：<span id="hint-text"></span></div>
-    </div>
-    
-    <!-- 统计信息 -->
-    <div>
-        总计：<span id="total-count">0</span> |
-        已学：<span id="learned-count">0</span> |
-        复习：<span id="review-count">0</span> |
-        掌握：<span id="mastered-count">0</span>
-    </div>
-    
-    <!-- 进度条 -->
-    <div style="width: 300px; height: 20px; border: 1px solid #ccc; margin: 20px 0;">
-        <div id="progress-fill" style="height: 100%; width: 50%; background: #4CAF50;"></div>
-    </div>
-    <div id="progress-text">0/0</div>
-    
-    <!-- 必须放在body末尾 -->
-    <script src="study.js"></script>
-    
-    <!-- 或者用这个调试 -->
     <script>
-        // 检查是否加载成功
-        window.addEventListener('load', function() {
-            console.log('页面已加载完成');
-            if (typeof charactersData !== 'undefined') {
-                console.log('✅ study.js 变量已定义');
-            }
-        });
+        function selectGrade(grade) {
+            // 保存选择的年级到localStorage，并跳转到学习页面
+            localStorage.setItem('selectedGrade', grade);
+            window.location.href = 'study.html';
+        }
+        
+        // 如果用户没有图片，显示占位符
+        window.onload = function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.onerror = function() {
+                    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgZmlsbD0iI2UzZTNlMyIvPjx0ZXh0IHg9IjYwIiB5PSI2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UTE8L3RleHQ+PC9zdmc+';
+                    this.alt = '二维码图片缺失';
+                };
+            });
+        };
     </script>
 </body>
 </html>

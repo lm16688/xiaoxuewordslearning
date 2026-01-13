@@ -1,0 +1,83 @@
+[
+  {
+    "grade": "一年级上册",
+    "characters": [
+      {
+        "word": "一",
+        "pinyin": "yī",
+        "words": ["一个", "第一", "一样"],
+        "sentence": "我有一个苹果。"
+      },
+      {
+        "word": "二",
+        "inyin": "èr",
+        "words": ["第二", "二月", "二人"],
+        "sentence": "我家有两个孩子。"
+      },
+      {
+        "word": "三",
+        "pinyin": "sān",
+        "words": ["三天", "三月", "三岁"],
+        "sentence": "小猫有三条鱼。"
+      },
+      {
+        "word": "上",
+        "pinyin": "shàng",
+        "words": ["上面", "上学", "上车"],
+        "sentence": "书在桌子上。"
+      },
+      {
+        "word": "下",
+        "pinyin": "xià",
+        "words": ["下面", "下课", "下雨"],
+        "sentence": "小狗在桌子下面。"
+      }
+    ]
+  },
+  {
+    "grade": "一年级下册",
+    "characters": [
+      {
+        "word": "春",
+        "pinyin": "chūn",
+        "words": ["春天", "春节", "春雨"],
+        "sentence": "春天来了，花儿开了。"
+      },
+      {
+        "word": "夏",
+        "pinyin": "xià",
+        "words": ["夏天", "夏季", "夏日"],
+        "sentence": "夏天可以去游泳。"
+      },
+      {
+        "word": "秋",
+        "pinyin": "qiū",
+        "words": ["秋天", "秋季", "秋风"],
+        "sentence": "秋天的叶子是黄色的。"
+      },
+      {
+        "word": "冬",
+        "pinyin": "dōng",
+        "words": ["冬天", "冬季", "冬雪"],
+        "sentence": "冬天下雪很漂亮。"
+      }
+    ]
+  },
+  {
+    "grade": "二年级上册",
+    "characters": [
+      {
+        "word": "明",
+        "pinyin": "míng",
+        "words": ["明天", "明白", "明亮"],
+        "sentence": "明天我们要去公园玩。"
+      },
+      {
+        "word": "亮",
+        "pinyin": "liàng",
+        "words": ["明亮", "亮光", "天亮"],
+        "sentence": "房间的灯光很明亮。"
+      }
+    ]
+  }
+]
