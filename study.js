@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // 获取演示数据（作为后备）
     function getDemoData() {
         return [
-            {character: "", pinyin: "", wordGroups: ["", ""], sentence: ""},
-            {character: "", pinyin: "", wordGroups: ["", ""], sentence: ""},
-            {character: "", pinyin: "", wordGroups: ["", ""], sentence: ""},
-            {character: "", pinyin: "", wordGroups: ["", ""], sentence: ""},
-            {character: "", pinyin: "", wordGroups: ["", ""], sentence: ""}
+            {character: "天", pinyin: "tiān", wordGroups: ["天空", "今天"], sentence: "蓝蓝的天空像大海。"},
+            {character: "地", pinyin: "dì", wordGroups: ["大地", "土地"], sentence: "大地妈妈真温暖。"},
+            {character: "人", pinyin: "rén", wordGroups: ["人们", "好人"], sentence: "人们都在努力工作。"},
+            {character: "你", pinyin: "nǐ", wordGroups: ["你好", "你们"], sentence: "你们好，新同学！"},
+            {character: "我", pinyin: "wǒ", wordGroups: ["我们", "自我"], sentence: "我们是一年级学生。"}
         ];
     }
     
