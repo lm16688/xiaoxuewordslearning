@@ -19,17 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const masteredCountElement = document.getElementById('mastered-count');
     const hintText = document.getElementById('hint-text');
     
-    // 新增的DOM元素
+    // 按钮元素
     const reviewStatsBtn = document.getElementById('review-stats-btn');
     const masteredStatsBtn = document.getElementById('mastered-stats-btn');
     const reviewCountBtn = document.getElementById('review-count-btn');
     const masteredCountBtn = document.getElementById('mastered-count-btn');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const modal = document.getElementById('review-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const charactersList = document.getElementById('characters-list');
-    const modalEmpty = document.getElementById('modal-empty');
-    const modalClose = document.getElementById('modal-close');
     
     // 学习状态变量
     let currentGrade = '';
@@ -38,7 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let learnedCharacters = [];
     let reviewCharacters = [];
     let masteredCharacters = [];
-    let currentModalType = ''; // 'review' 或 'mastered'
+    
+    // 滑动卡片相关变量
+    let currentSliderType = ''; // 'review' 或 'mastered'
+    let currentSliderPage = 0;
+    const CARDS_PER_PAGE = 4;
     
     // 初始化
     async function init() {
@@ -88,16 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 charactersData = getDemoData();
             }
             
-            // 更新显示
-            updateDisplay();
-            updateStats();
-            
         } catch (error) {
             console.error('加载数据失败:', error);
             // 使用演示数据作为后备
             charactersData = getDemoData();
-            updateDisplay();
-            updateStats();
         }
     }
     
@@ -181,6 +173,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 更新艾宾浩斯提示
         updateHint();
+        
+        // 如果滑动卡片显示中，更新激活状态
+        const sliderContainer = document.getElementById('characters-slider-container');
+        if (sliderContainer && sliderContainer.style.display !== 'none') {
+            updateSliderDisplay();
+        }
     }
     
     // 更新学习统计
@@ -221,90 +219,154 @@ document.addEventListener('DOMContentLoaded', function() {
     function bindNewEvents() {
         // 查看需复习按钮
         reviewStatsBtn.addEventListener('click', function() {
-            showCharactersModal('review', '需复习的生字');
+            showCharactersSlider('review', '需复习的生字');
         });
         
         // 查看已掌握按钮
         masteredStatsBtn.addEventListener('click', function() {
-            showCharactersModal('mastered', '已掌握的生字');
+            showCharactersSlider('mastered', '已掌握的生字');
         });
         
-        // 关闭模态框
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', function(e) {
-            if (e.target === modalOverlay) {
-                closeModal();
+        // 关闭滑动卡片
+        const closeSliderBtn = document.getElementById('close-slider-btn');
+        closeSliderBtn.addEventListener('click', closeCharactersSlider);
+        
+        // 滑动控制按钮
+        const sliderPrevBtn = document.getElementById('slider-prev-btn');
+        const sliderNextBtn = document.getElementById('slider-next-btn');
+        
+        sliderPrevBtn.addEventListener('click', function() {
+            if (currentSliderPage > 0) {
+                currentSliderPage--;
+                updateSliderDisplay();
             }
         });
         
-        // 按下ESC键关闭模态框
+        sliderNextBtn.addEventListener('click', function() {
+            const characters = getCurrentSliderCharacters();
+            const totalPages = Math.ceil(characters.length / CARDS_PER_PAGE);
+            if (currentSliderPage < totalPages - 1) {
+                currentSliderPage++;
+                updateSliderDisplay();
+            }
+        });
+        
+        // 按下ESC键关闭滑动卡片
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modalOverlay.style.display !== 'none') {
-                closeModal();
+            if (e.key === 'Escape') {
+                closeCharactersSlider();
             }
         });
     }
     
-    // 显示生字列表模态框
-    function showCharactersModal(type, title) {
-        currentModalType = type;
-        modalTitle.textContent = title;
-        
-        // 获取对应的生字列表
-        let characters = [];
-        if (type === 'review') {
-            characters = reviewCharacters;
-        } else if (type === 'mastered') {
-            characters = masteredCharacters;
+    // 获取当前滑动卡片类型的生字列表
+    function getCurrentSliderCharacters() {
+        if (currentSliderType === 'review') {
+            return reviewCharacters;
+        } else if (currentSliderType === 'mastered') {
+            return masteredCharacters;
         }
+        return [];
+    }
+    
+    // 显示生字滑动卡片
+    function showCharactersSlider(type, title) {
+        const sliderContainer = document.getElementById('characters-slider-container');
+        const sliderTitle = document.getElementById('slider-title');
         
-        // 清空列表
-        charactersList.innerHTML = '';
+        currentSliderType = type;
+        currentSliderPage = 0;
+        sliderTitle.textContent = title;
+        
+        // 更新滑动卡片内容
+        updateSliderDisplay();
+        
+        // 显示滑动容器
+        sliderContainer.style.display = 'block';
+        
+        // 滚动到滑动卡片区域
+        sliderContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    
+    // 更新滑动卡片显示
+    function updateSliderDisplay() {
+        const characters = getCurrentSliderCharacters();
+        const charactersSlider = document.getElementById('characters-slider');
+        const sliderEmpty = document.getElementById('slider-empty');
+        const sliderDots = document.getElementById('slider-dots');
+        const sliderPrevBtn = document.getElementById('slider-prev-btn');
+        const sliderNextBtn = document.getElementById('slider-next-btn');
+        
+        // 清空内容
+        charactersSlider.innerHTML = '';
+        sliderDots.innerHTML = '';
         
         if (characters.length === 0) {
             // 显示空状态
-            modalEmpty.style.display = 'block';
-        } else {
-            modalEmpty.style.display = 'none';
-            
-            // 显示生字列表
-            characters.forEach(char => {
-                // 找到生字的完整信息
-                const charInfo = charactersData.find(item => item.character === char);
-                if (charInfo) {
-                    const charItem = document.createElement('div');
-                    charItem.className = 'character-item';
-                    charItem.innerHTML = `
-                        <div class="character-display">${charInfo.character}</div>
-                        <div class="character-pinyin">${charInfo.pinyin}</div>
-                        <div class="learning-status">
-                            ${reviewCharacters.includes(char) ? '<span class="status-review">需复习</span>' : ''}
-                            ${masteredCharacters.includes(char) ? '<span class="status-mastered">已掌握</span>' : ''}
-                        </div>
-                    `;
-                    
-                    // 点击生字项，跳转到该生字学习
-                    charItem.addEventListener('click', function() {
-                        const index = charactersData.findIndex(item => item.character === char);
-                        if (index !== -1) {
-                            currentIndex = index;
-                            updateDisplay();
-                            closeModal();
-                        }
-                    });
-                    
-                    charactersList.appendChild(charItem);
-                }
-            });
+            sliderEmpty.style.display = 'block';
+            sliderPrevBtn.disabled = true;
+            sliderNextBtn.disabled = true;
+            return;
         }
         
-        // 显示模态框
-        modalOverlay.style.display = 'flex';
+        sliderEmpty.style.display = 'none';
+        
+        // 计算分页
+        const totalPages = Math.ceil(characters.length / CARDS_PER_PAGE);
+        const startIndex = currentSliderPage * CARDS_PER_PAGE;
+        const endIndex = Math.min(startIndex + CARDS_PER_PAGE, characters.length);
+        const currentPageCharacters = characters.slice(startIndex, endIndex);
+        
+        // 显示当前页的生字卡片
+        currentPageCharacters.forEach(char => {
+            // 找到生字的完整信息
+            const charInfo = charactersData.find(item => item.character === char);
+            if (charInfo) {
+                const isActive = currentIndex !== -1 && charactersData[currentIndex].character === char;
+                
+                const charCard = document.createElement('div');
+                charCard.className = `character-card-item ${isActive ? 'active' : ''}`;
+                charCard.innerHTML = `
+                    <div class="card-character">${charInfo.character}</div>
+                    <div class="card-pinyin">${charInfo.pinyin}</div>
+                    <div class="card-status ${reviewCharacters.includes(char) ? 'status-review' : ''} ${masteredCharacters.includes(char) ? 'status-mastered' : ''}">
+                        ${reviewCharacters.includes(char) ? '需复习' : masteredCharacters.includes(char) ? '已掌握' : '已学习'}
+                    </div>
+                `;
+                
+                // 点击生字卡片，跳转到该生字学习
+                charCard.addEventListener('click', function() {
+                    const index = charactersData.findIndex(item => item.character === char);
+                    if (index !== -1) {
+                        currentIndex = index;
+                        updateDisplay();
+                    }
+                });
+                
+                charactersSlider.appendChild(charCard);
+            }
+        });
+        
+        // 更新分页点
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('div');
+            dot.className = `slider-dot ${i === currentSliderPage ? 'active' : ''}`;
+            dot.addEventListener('click', function() {
+                currentSliderPage = i;
+                updateSliderDisplay();
+            });
+            sliderDots.appendChild(dot);
+        }
+        
+        // 更新控制按钮状态
+        sliderPrevBtn.disabled = currentSliderPage === 0;
+        sliderNextBtn.disabled = currentSliderPage >= totalPages - 1;
     }
     
-    // 关闭模态框
-    function closeModal() {
-        modalOverlay.style.display = 'none';
+    // 关闭滑动卡片
+    function closeCharactersSlider() {
+        const sliderContainer = document.getElementById('characters-slider-container');
+        sliderContainer.style.display = 'none';
     }
     
     // 语音朗读
