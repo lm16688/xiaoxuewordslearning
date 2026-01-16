@@ -131,7 +131,33 @@
                 </div>
             </div>
         </main>
+                <!-- 复习和掌握生字列表模态框 -->
+        <div class="modal-overlay" id="modal-overlay" style="display: none;">
+            <div class="modal" id="review-modal">
+                <div class="modal-header">
+                    <h3 id="modal-title">需复习的生字</h3>
+                    <button class="modal-close" id="modal-close">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <div class="characters-list" id="characters-list">
+                        <!-- 生字列表会在这里动态生成 -->
+                    </div>
+                    <div class="modal-empty" id="modal-empty" style="display: none;">
+                        <p>暂无生字</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        <!-- 新增的统计按钮 -->
+        <div class="stats-buttons">
+            <button class="stats-btn review-stats-btn" id="review-stats-btn">
+                <i class="fas fa-redo"></i> 查看需复习 (<span id="review-count-btn">0</span>)
+            </button>
+            <button class="stats-btn mastered-stats-btn" id="mastered-stats-btn">
+                <i class="fas fa-check-circle"></i> 查看已掌握 (<span id="mastered-count-btn">0</span>)
+            </button>
+        </div>
         <footer class="study-footer">
             <p>艾宾浩斯记忆法：在学习后的特定时间点复习，可以有效巩固记忆，减少遗忘。</p>
         </footer>
