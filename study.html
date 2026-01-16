@@ -26,12 +26,24 @@
         <main class="study-main">
             <div class="character-section">
                 <div class="character-display">
-                    <div class="character-card" id="character-card">
-                        <div class="character" id="character"></div>
-                        <button class="speak-btn" id="speak-btn">
-                            <i class="fas fa-volume-up"></i> 点击朗读
-                        </button>
-                    </div>
+                   <div class="character-card" id="character-card">
+    <div class="character-display-wrapper">
+        <!-- 田字格背景 -->
+        <div class="character-grid">
+            <div class="grid-line vertical"></div>
+            <div class="grid-line horizontal"></div>
+            <!-- 可选：添加米字格斜线 -->
+             <div class="grid-line diagonal-1"></div>
+            <div class="grid-line diagonal-2"></div>
+        </div>
+        <!-- 生字显示 -->
+        <div class="character" id="character"></div>
+    </div>
+    <div class="grid-size-hint">田字格</div>
+    <button class="speak-btn" id="speak-btn">
+        <i class="fas fa-volume-up"></i> 点击朗读
+    </button>
+</div>
                     
                     <div class="hint-box">
                         <h3><i class="fas fa-lightbulb"></i> 艾宾浩斯学习法提示</h3>
