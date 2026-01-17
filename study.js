@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const CARDS_PER_PAGE = 4;
     
     // 初始化
-    async function init() {
+   /* async function init() {
         // 从localStorage获取选择的年级
         currentGrade = localStorage.getItem('selectedGrade') || '一年级上册';
         gradeTitle.textContent = currentGrade + ' 生字学习';
@@ -56,7 +56,71 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 绑定新的事件
         bindNewEvents();
+    }*/
+    // 初始化
+async function init() {
+    // 从localStorage获取选择的年级
+    currentGrade = localStorage.getItem('selectedGrade') || '一年级上册';
+    gradeTitle.textContent = currentGrade + ' 生字学习';
+    
+    // 检测移动端
+    detectMobileDevice();
+    
+    // 从JSON文件加载生字数据
+    await loadCharactersData();
+    
+    // 从localStorage加载学习进度
+    loadLearningProgress();
+    
+    // 更新显示
+    updateDisplay();
+    updateStats();
+    
+    // 绑定新的事件
+    bindNewEvents();
+}
+
+// 检测移动端设备
+function detectMobileDevice() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // 添加移动端特定的样式类
+        document.body.classList.add('mobile-device');
+        
+        // 调整触摸交互
+        adjustMobileTouchInteractions();
+        
+        console.log('移动端设备检测到');
     }
+}
+
+// 调整移动端触摸交互
+function adjustMobileTouchInteractions() {
+    // 为按钮添加触摸反馈
+    const allButtons = document.querySelectorAll('button');
+    allButtons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+        });
+        
+        button.addEventListener('touchend', function() {
+            this.style.opacity = '1';
+        });
+    });
+    
+    // 为生字卡片添加触摸反馈
+    const characterCards = document.querySelectorAll('.character-card-item');
+    characterCards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        card.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+}
     
     // 加载生字数据
     async function loadCharactersData() {
@@ -370,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 语音朗读
-    function speakText(text) {
+  /*  function speakText(text) {
         if ('speechSynthesis' in window) {
             // 停止任何正在进行的朗读
             speechSynthesis.cancel();
@@ -386,10 +450,208 @@ document.addEventListener('DOMContentLoaded', function() {
             // 不再弹出alert，静默处理
             console.log('您的浏览器不支持语音朗读功能');
         }
+    }*/
+    // 语音朗读 - 增强移动端兼容性
+function speakText(text) {
+    if ('speechSynthesis' in window) {
+        // 停止任何正在进行的朗读
+        speechSynthesis.cancel();
+        
+        // 创建语音实例
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'zh-CN';
+        utterance.rate = 0.8; // 稍慢的语速
+        
+        // 移动端特殊处理
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // 移动端设备
+            console.log('移动端设备，尝试语音朗读');
+            
+            // 尝试在用户交互后立即播放
+            utterance.onstart = function() {
+                console.log('语音开始播放');
+            };
+            
+            utterance.onerror = function(event) {
+                console.error('语音播放错误:', event.error);
+                if (event.error === 'interrupted') {
+                    // 用户中断，可能是浏览器策略限制
+                    showMobileSpeechHint();
+                }
+            };
+            
+            // 延迟一点开始，确保在用户交互上下文中
+            setTimeout(() => {
+                speechSynthesis.speak(utterance);
+            }, 100);
+        } else {
+            // 桌面端正常播放
+            speechSynthesis.speak(utterance);
+        }
+    } else {
+        // 浏览器不支持语音合成
+        console.log('您的浏览器不支持语音朗读功能');
+        showUnsupportedBrowserMessage();
+    }
+}
+
+// 显示移动端语音提示
+function showMobileSpeechHint() {
+    // 检查是否已经显示过提示
+    if (localStorage.getItem('speechHintShown')) {
+        return;
     }
     
+    // 创建提示框
+    const hintBox = document.createElement('div');
+    hintBox.className = 'mobile-speech-hint';
+    hintBox.innerHTML = `
+        <div class="hint-content">
+            <h4><i class="fas fa-volume-up"></i> 语音朗读提示</h4>
+            <p>在部分手机浏览器中，语音朗读功能可能需要：</p>
+            <ul>
+                <li>确保手机音量已开启</li>
+                <li>某些浏览器需要允许"自动播放"权限</li>
+                <li>如果无法朗读，请尝试切换到Chrome或Safari浏览器</li>
+            </ul>
+            <button class="hint-close-btn">知道了</button>
+        </div>
+    `;
+    
+    // 样式
+    hintBox.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px;
+    `;
+    
+    const hintContent = hintBox.querySelector('.hint-content');
+    hintContent.style.cssText = `
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    `;
+    
+    hintBox.querySelector('h4').style.cssText = `
+        color: #4a6fa5;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    `;
+    
+    hintBox.querySelector('ul').style.cssText = `
+        padding-left: 20px;
+        margin: 10px 0;
+    `;
+    
+    hintBox.querySelector('li').style.marginBottom = '5px';
+    
+    const closeBtn = hintBox.querySelector('.hint-close-btn');
+    closeBtn.style.cssText = `
+        background-color: #4a6fa5;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 15px;
+        width: 100%;
+    `;
+    
+    // 关闭按钮事件
+    closeBtn.addEventListener('click', function() {
+        document.body.removeChild(hintBox);
+        localStorage.setItem('speechHintShown', 'true');
+    });
+    
+    // 添加到页面
+    document.body.appendChild(hintBox);
+    
+    // 5秒后自动关闭
+    setTimeout(() => {
+        if (document.body.contains(hintBox)) {
+            document.body.removeChild(hintBox);
+            localStorage.setItem('speechHintShown', 'true');
+        }
+    }, 5000);
+}
+
+// 显示浏览器不支持的消息
+function showUnsupportedBrowserMessage() {
+    const messageBox = document.createElement('div');
+    messageBox.className = 'unsupported-browser-message';
+    messageBox.innerHTML = `
+        <div class="message-content">
+            <p><i class="fas fa-exclamation-triangle"></i> 您的浏览器不支持语音朗读功能</p>
+            <p>建议使用最新版的Chrome、Edge或Safari浏览器</p>
+        </div>
+    `;
+    
+    messageBox.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 9998;
+        max-width: 90%;
+        text-align: center;
+        animation: slideUp 0.3s ease;
+    `;
+    
+    // 动画
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideUp {
+            from { bottom: -100px; }
+            to { bottom: 20px; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    document.body.appendChild(messageBox);
+    
+    // 5秒后自动消失
+    setTimeout(() => {
+        if (document.body.contains(messageBox)) {
+            messageBox.style.animation = 'slideDown 0.3s ease';
+            const slideDownStyle = document.createElement('style');
+            slideDownStyle.textContent = `
+                @keyframes slideDown {
+                    from { bottom: 20px; }
+                    to { bottom: -100px; }
+                }
+            `;
+            document.head.appendChild(slideDownStyle);
+            
+            setTimeout(() => {
+                if (document.body.contains(messageBox)) {
+                    document.body.removeChild(messageBox);
+                }
+            }, 300);
+        }
+    }, 5000);
+}
+    
     // 事件监听器
-    speakBtn.addEventListener('click', function() {
+   /* speakBtn.addEventListener('click', function() {
         const currentChar = charactersData[currentIndex];
         // 朗读生字
         speakText(currentChar.character);
@@ -401,7 +663,37 @@ document.addEventListener('DOMContentLoaded', function() {
             updateStats();
             updateHint();
         }
-    });
+    });*/
+    speakBtn.addEventListener('click', function() {
+    const currentChar = charactersData[currentIndex];
+    
+    // 移动端特殊处理：显示加载状态
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        const originalHtml = speakBtn.innerHTML;
+        speakBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 加载中...';
+        speakBtn.disabled = true;
+        
+        // 朗读生字
+        speakText(currentChar.character);
+        
+        // 恢复按钮状态
+        setTimeout(() => {
+            speakBtn.innerHTML = originalHtml;
+            speakBtn.disabled = false;
+        }, 1000);
+    } else {
+        // 桌面端正常处理
+        speakText(currentChar.character);
+    }
+    
+    // 添加到已学习列表（如果还未学习）
+    if (!learnedCharacters.includes(currentChar.character)) {
+        learnedCharacters.push(currentChar.character);
+        saveLearningProgress();
+        updateStats();
+        updateHint();
+    }
+});
     
     prevBtn.addEventListener('click', function() {
         if (currentIndex > 0) {
